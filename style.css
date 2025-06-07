@@ -19,6 +19,7 @@ body {
 .LogoTitulo{
     display: flex;
     align-items: center;
+    
 }
 
 .Encabezado {
