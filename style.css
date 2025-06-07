@@ -1,0 +1,60 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --titulos: #466455; 
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.Logo{
+    margin-right: 5px;
+}
+
+.LogoTitulo{
+    display: flex;
+    align-items: center;
+}
+
+.Encabezado {
+    background-color: #9FE2BF;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.Titulo {
+    display: flex;
+    color: var(--titulos);
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--titulos);
+}
+
+.Eslogan{
+    font-size: 40px;
+}
+
+.Eslogan1{
+    color: var(--titulos);
+}
+
+.Eslogan2{
+    color: #FFC300;
+}
