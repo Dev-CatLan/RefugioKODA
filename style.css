@@ -6,6 +6,7 @@
 
 :root{
     --titulos: #466455; 
+    --ColorPrincipal: white;
 }
 
 body {
@@ -23,10 +24,10 @@ body {
 }
 
 .Encabezado {
-    background-color: #9FE2BF;
+    background-color: var(--ColorPrincipal);
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px;
     align-items: center;
     position: sticky;
     top: 0;
