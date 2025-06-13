@@ -1,62 +1,26 @@
-* {
+* { /*Selector universal */
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Contenido+Padding */
 }
 
 :root{
     --titulos: #466455; 
     --ColorPrincipal: white;
+    --ColordeFuente: rgb(0, 0, 0);
+    --ColordeFondo: rgb(207, 207, 207);
+    --ColorSeparador: Blue;
 }
 
-body {
-    font-family: sans-serif;
+body{
+    background: var(--ColordeFondo);
+    font-family: 'Lexend Deca'; /*Fuente agregada desde HTML5*/
 }
 
-.Logo{
-    margin-right: 5px;
-}
-
-.LogoTitulo{
-    display: flex;
-    align-items: center;
-    
-}
-
-.Encabezado {
-    background-color: var(--ColorPrincipal);
+.Encabezado{
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    background-color: var(--ColorPrincipal);
+    padding: 20px;
     align-items: center;
-    position: sticky;
-    top: 0;
-}
-
-.Titulo {
-    display: flex;
-    color: var(--titulos);
-}
-
-.menu {
-    list-style-type: none;
-    display: flex;
-    gap: 25px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: var(--titulos);
-}
-
-.Eslogan{
-    font-size: 40px;
-}
-
-.Eslogan1{
-    color: var(--titulos);
-}
-
-.Eslogan2{
-    color: #FFC300;
 }
