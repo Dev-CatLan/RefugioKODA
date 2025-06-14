@@ -30,6 +30,7 @@
             --ColordeFuente: rgb(0, 0, 0);
             --ColordeFondo: rgb(207, 207, 207);
             --ColorSeparador: Blue;
+            --ColorKODA: #fda31b;
         }
 
         body {
@@ -64,12 +65,68 @@
 
         .Menu li {
             list-style-type: none;
+            display: flex;
             gap: 25px;
+            cursor: pointer;
+            align-items: center;
         }
 
         .Menu li a {
             text-decoration: none;
             color: black;
+        }
+
+        .DonaBoton {
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: white;
+            background: var(--ColorKODA);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Lexend Deca';
+        }
+
+        .Presentacion {
+            margin: 15px;
+            margin-top: 15px;
+            display: flex;
+            border-radius: 8px;
+            background-color: var(--ColorPrincipal);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Presentacion img{
+            border-radius: 8px;
+        }
+
+        .Eslogan{
+            font-size: 50px;
+        }
+
+        .Eslogan1{
+            text-align: center;
+        }
+
+        .Eslogan2 {
+            color: var(--ColorKODA);
+            text-align: center;
+        }
+
+        .Presentacion:hover .Eslogan1{
+            color: var(--ColorKODA);
+        }
+
+        .Presentacion:hover .Eslogan2{
+            color: var(--ColordeFuente);
+        }
+
+        .Adopciones {
+            margin: 15px;
+            border-radius: 8px;
+            background-color: var(--ColorPrincipal);
         }
     </style>
 </head>
@@ -79,7 +136,7 @@
     <header>
         <div class="Encabezado">
             <div class="LogoyTitulo">
-                <img src="/Imagenes/Recursos Pagina Web/Logo.png" alt="Dibujo de perro tipo Schnauzer con fondo naranja"
+                <img src="Imagenes/Recursos Pagina Web/Logo.png" alt="Dibujo de perro tipo Schnauzer con fondo naranja"
                     width="70px">
                 <h1>Refugio Koda</h1>
             </div>
@@ -90,7 +147,10 @@
                         <li><a href="#Adopta">Adopta</a></li>
                         <li><a href="#Reporta">Reporta</a></li>
                         <li><a href="#Voluntariados">Voluntariados</a></li>
-                        <li><a href="#Dona">Dona</a></li>
+                        <li>
+                            <button class="DonaBoton" onclick="location.href='#Dona'">Dona</button>
+                        </li>
+
                     </ul>
                 </nav>
             </div>
@@ -98,93 +158,23 @@
     </header>
 
     <main>
-        <div class="Eslogan">
-            <h2>Expertos en Sanar</h2>
-            <h2>Heridas y Corazones</h2>
+
+        <div class="Presentacion">
+            <div class="Eslogan">
+                <h2 class="Eslogan1">Expertos en Sanar</h2>
+                <h2 class="Eslogan2">Heridas y Corazones</h2>
+            </div>
+            <img src="Imagenes/Recursos Pagina Web/Portada.jpeg" alt="Dos perros relajados en un balcón" width="500px">
         </div>
-        <img src="/Imagenes/Recursos Pagina Web/Portada.jpeg" alt="Dos perros relajados en un balcón" width="500px">
-        <section id="Adopta">
+
+        <section id="Adopta" class="Adopciones">
             <h2>Listos para Adoptar</h2>
             <div class="ContenedorCarrusel">
-                <img src="/Imagenes/Fotos para Adopción/Masimo.jpeg" alt="Perro café, mezcla de Pitbull">
-                <img src="/Imagenes/Fotos para Adopción/Chia.jpeg" alt="Perra mezcla de Cocker">
-                <img src="/Imagenes/Fotos para Adopción/Luca.jpeg" alt="Cachorro negro con blanco">
+                <img src="Imagenes/Fotos para Adopción/Masimo.jpeg" alt="Perro café, mezcla de Pitbull">
+                <img src="Imagenes/Fotos para Adopción/Chia.jpeg" alt="Perra mezcla de Cocker">
+                <img src="Imagenes/Fotos para Adopción/Luca.jpeg" alt="Cachorro negro con blanco">
             </div>
         </section>
-
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt asperiores at vitae velit sapiente
-            excepturi iusto cumque? Harum voluptatem, hic omnis, debitis nulla tenetur asperiores commodi nemo quibusdam
-            aperiam veniam, nobis atque vitae itaque in modi. Eaque non cumque, minima optio aspernatur ea impedit,
-            veniam qui dolores voluptatibus asperiores dolorum voluptatum quos voluptates? Quaerat veritatis vitae
-            distinctio qui! Harum culpa corporis accusamus aliquid officia reprehenderit dolor temporibus a, et
-            exercitationem, quidem veniam omnis, laborum quam minus ipsa voluptatem aperiam alias dolore quisquam animi
-            facilis reiciendis provident. Facere cumque obcaecati, ab dicta dignissimos iure dolore doloribus ratione
-            eos distinctio quaerat! Itaque optio, placeat non incidunt dignissimos molestiae similique velit suscipit
-            sed aspernatur hic obcaecati dolore id repellendus soluta vitae neque reprehenderit dolor expedita mollitia
-            veniam explicabo. Modi eius voluptas sed nemo illo consequatur, quod aspernatur qui corporis eligendi
-            maiores tenetur, excepturi adipisci inventore. Mollitia dolorem perspiciatis tempora aliquam. Eveniet cum
-            iusto quam at, cumque, sequi nam officia laboriosam repellat velit nesciunt, molestias explicabo magnam
-            perferendis beatae illo numquam itaque minima incidunt quidem consequatur? Ipsa est laudantium eos magnam
-            minima ratione voluptate quasi labore unde itaque! Veniam optio recusandae saepe quia totam, illum
-            aspernatur maiores nobis eligendi fuga dolores inventore voluptas unde maxime at qui doloribus laudantium,
-            molestiae ipsam! Distinctio alias tenetur consectetur, velit recusandae iusto animi! Quo et odio aperiam rem
-            iste, tempora fugiat magnam similique itaque esse perferendis minus libero iure fugit quod exercitationem
-            eos? Sunt nam et voluptatum quos quibusdam hic consequatur deserunt dolor debitis qui! Illum, cum doloremque
-            eligendi nostrum voluptates aliquid harum iste repellendus aperiam dicta a reprehenderit voluptas asperiores
-            molestiae quod iusto architecto rem. Perferendis nemo corrupti enim, alias aperiam explicabo ad numquam,
-            dolorum obcaecati quasi rerum consequuntur possimus, dolore officia? Velit et alias vero nostrum obcaecati
-            autem facere ipsum eum, omnis qui, impedit eaque doloremque praesentium natus, maiores a nemo maxime quasi
-            est reiciendis quos ad neque ratione dolore. Expedita dolores itaque tenetur iste impedit, error est
-            molestias delectus repellat illo? Sed delectus in fugiat atque ea, quaerat at eaque doloremque aliquid
-            asperiores aut amet vitae nulla fugit. Possimus autem porro sit soluta. Consequuntur voluptate adipisci
-            error quam quibusdam recusandae facilis sequi ut voluptatum excepturi aliquid quidem eaque cumque impedit
-            aperiam ad similique et possimus ex, earum commodi asperiores eveniet. Quis dolores eius impedit, nisi aut
-            quod iure expedita ullam sequi. Ducimus, ipsum. Velit aliquid officia consectetur adipisci corrupti quod
-            unde ut tempora. Voluptas, veniam quibusdam error incidunt accusantium corporis eveniet impedit dolorem.
-            Suscipit maxime voluptatem quam est, voluptatum mollitia fugiat! Hic doloribus, quia asperiores suscipit
-            minima id accusantium ducimus dicta soluta illo reiciendis perferendis quibusdam officia qui laborum
-            aspernatur eveniet perspiciatis beatae, voluptates explicabo ratione. Velit, eius omnis nobis commodi quidem
-            dolores laudantium minus porro deserunt quo alias officia sit atque totam ratione fugit? Commodi sunt
-            impedit, delectus consequatur quis consequuntur beatae, cupiditate eius explicabo dignissimos fugiat! Aut
-            nemo tempora laboriosam tenetur iure voluptas? Nisi facilis aperiam tenetur perferendis! Est autem rem enim
-            reiciendis eligendi. Sapiente, vero? Dolorum, aliquam ad vel voluptatum dignissimos eum veniam ducimus
-            mollitia magni voluptatem ut accusantium quam deleniti praesentium quia odio, sint ipsam quis autem
-            obcaecati laborum! Nesciunt sed voluptate debitis voluptatibus modi praesentium temporibus! Maxime eum
-            recusandae, reprehenderit voluptas, aut inventore, debitis suscipit porro numquam error nihil repudiandae
-            adipisci a necessitatibus dolorum! Saepe, quibusdam molestias dicta voluptate quam eaque voluptas
-            consequuntur, voluptatibus debitis doloribus blanditiis? Fuga praesentium aut sapiente debitis aspernatur
-            ducimus inventore sint. Magnam distinctio necessitatibus vero exercitationem deserunt! Sint facere ea
-            mollitia blanditiis sapiente? Tempore nam molestiae fugiat quod iusto et adipisci rerum sequi ipsum nostrum
-            vel eveniet qui deserunt libero magnam eligendi error dolorum deleniti, reiciendis dignissimos accusantium!
-            Sit cum adipisci blanditiis, labore aperiam porro magni asperiores esse animi, nostrum praesentium
-            veritatis! Sed a non officia necessitatibus, possimus aut deserunt consequatur maxime illo quasi saepe
-            perspiciatis, mollitia provident vel labore autem culpa architecto voluptatem rerum accusamus suscipit
-            similique. Doloremque aliquid excepturi modi! Maxime sunt ea fuga eligendi reiciendis, at autem illum,
-            voluptatibus odit accusamus, nostrum nemo quia earum! Libero sapiente laborum, aspernatur ducimus soluta
-            fugiat praesentium est mollitia, hic, deserunt quae optio consequatur animi accusamus aut. Deserunt
-            inventore similique amet hic ea, repellat iste cupiditate reiciendis porro magni soluta. Nobis aspernatur
-            excepturi nostrum placeat? Sit iusto illum eum dicta in cumque quo laudantium laborum inventore. Doloribus
-            molestias id odio odit consequatur modi ut mollitia? Dolorem alias tempora blanditiis at ab recusandae
-            accusantium? Exercitationem quos eaque possimus maiores quis deleniti, doloribus deserunt iure! Dignissimos
-            accusamus quia perspiciatis, praesentium at ea ex error. Natus fugit ullam exercitationem blanditiis.
-            Voluptate, molestiae. Quasi tenetur autem, mollitia ab sunt sit, debitis repellendus in fugiat sequi
-            deleniti adipisci distinctio voluptatem alias. Asperiores quibusdam perferendis reprehenderit a incidunt
-            maiores eos esse explicabo recusandae sed! Tempore repellendus iste commodi laborum enim at amet eaque quasi
-            explicabo sed aut facere, quisquam laudantium, mollitia maiores cumque aliquam tempora animi accusamus ad
-            similique ducimus veniam, maxime provident. Pariatur odit veniam fugit consequatur quas perferendis dolorum,
-            saepe, tenetur harum, suscipit dolore laboriosam in blanditiis quisquam commodi cumque iste distinctio magni
-            nulla debitis! Hic, quod dolore facilis nemo voluptatibus, ea dolor ipsam vero animi eum molestiae sit quae
-            excepturi vel! Nam perspiciatis tenetur culpa eligendi, illo deserunt optio dolorum, provident minus
-            voluptate ex voluptas corporis ipsa, eveniet maiores ipsum sint nobis distinctio maxime adipisci. Iusto
-            aliquid odit modi, itaque ipsum corrupti natus quas deserunt! Ipsam maiores explicabo enim expedita. Sequi
-            modi esse, eveniet quas facere dicta architecto repellat ullam, magnam dolorum veritatis adipisci. Quaerat
-            obcaecati qui laborum, repudiandae consectetur eos reiciendis unde accusamus similique, magni reprehenderit,
-            dolore illum nostrum blanditiis maxime deserunt dolores nulla ipsa adipisci debitis recusandae quis possimus
-            quasi? Ut fugit, magni voluptas sunt cumque, excepturi iste aspernatur laudantium nisi fugiat eaque sint
-            suscipit ab voluptatum necessitatibus commodi! Dolores qui repudiandae ea incidunt excepturi, ipsa officiis
-            repellat perspiciatis modi in dolor dolorum eum quia, blanditiis asperiores minus? Porro, a. Ullam nam
-            praesentium quisquam voluptatem? Magnam totam iusto cum, earum, sunt nam omnis nisi velit aperiam explicabo
-            rerum fugit fugiat officiis officia voluptatum numquam dolores accusamus. Dignissimos.</p>
 
     </main>
     <footer></footer>
