@@ -1,27 +1,117 @@
-* { /*Selector universal */
+* {
+    /*Selector universal */
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box; /*Contenido+Padding */
+    box-sizing: border-box;
+    /*Contenido+Padding */
 }
 
-:root{
-    --titulos: #466455; 
+:root {
+    --titulos: #466455;
     --ColorPrincipal: white;
     --ColordeFuente: rgb(0, 0, 0);
     --ColordeFondo: rgb(207, 207, 207);
     --ColorSeparador: Blue;
+    --ColorKODA: #fda31b;
 }
 
-body{
+body {
     background: var(--ColordeFondo);
-    font-family: 'Lexend Deca'; /*Fuente agregada desde HTML5*/
+    font-family: 'Lexend Deca';
+    /*Fuente agregada desde HTML5*/
 }
 
-.Encabezado{
-    display: flex;
-    justify-content: space-between;
+header {
+    position: sticky;
+    top: 0;
+}
+
+.Encabezado {
     background-color: var(--ColorPrincipal);
-    padding: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Encabezado img {
+    max-width: 100%;
+    height: auto;
+}
+
+.LogoyTitulo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Menu ul {
+    display: flex;
+    gap: 25px;
+}
+
+.Menu li {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
     align-items: center;
 }
 
+.Menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.DonaBoton {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    background: var(--ColorKODA);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Lexend Deca';
+}
+
+.Presentacion {
+    margin: 15px;
+    margin-top: 15px;
+    display: flex;
+    border-radius: 8px;
+    background-color: var(--ColorPrincipal);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Presentacion img {
+    border-radius: 8px;
+}
+
+.Eslogan {
+    font-size: 50px;
+}
+
+.Eslogan1 {
+    text-align: center;
+}
+
+.Eslogan2 {
+    color: var(--ColorKODA);
+    text-align: center;
+}
+
+.Presentacion:hover .Eslogan1 {
+    color: var(--ColorKODA);
+}
+
+.Presentacion:hover .Eslogan2 {
+    color: var(--ColordeFuente);
+}
+
+.Adopciones {
+    margin: 15px;
+    border-radius: 8px;
+    background-color: var(--ColorPrincipal);
+}

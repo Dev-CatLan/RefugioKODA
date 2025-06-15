@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsive-->
     <meta name="Description"
         content="Refugio guatemalteco organizado sin fines de lucro para el rescate y reubicación de animales en situaciones vulnerables">
     <meta name="Keywords" content="Refugio, rescate animal, refugio guatemalteco, adopcion">
@@ -13,122 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <!--Lexend Deca by Google fonts -->
-    <!--<link rel="stylesheet" href="style.css">-->
-
-    <style>
-        * {
-            /*Selector universal */
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-            /*Contenido+Padding */
-        }
-
-        :root {
-            --titulos: #466455;
-            --ColorPrincipal: white;
-            --ColordeFuente: rgb(0, 0, 0);
-            --ColordeFondo: rgb(207, 207, 207);
-            --ColorSeparador: Blue;
-            --ColorKODA: #fda31b;
-        }
-
-        body {
-            background: var(--ColordeFondo);
-            font-family: 'Lexend Deca';
-            /*Fuente agregada desde HTML5*/
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-        }
-
-        .Encabezado {
-            background-color: var(--ColorPrincipal);
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .LogoyTitulo {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .Menu ul {
-            display: flex;
-            gap: 25px;
-        }
-
-        .Menu li {
-            list-style-type: none;
-            display: flex;
-            gap: 25px;
-            cursor: pointer;
-            align-items: center;
-        }
-
-        .Menu li a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .DonaBoton {
-            padding: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
-            color: white;
-            background: var(--ColorKODA);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: 'Lexend Deca';
-        }
-
-        .Presentacion {
-            margin: 15px;
-            margin-top: 15px;
-            display: flex;
-            border-radius: 8px;
-            background-color: var(--ColorPrincipal);
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .Presentacion img{
-            border-radius: 8px;
-        }
-
-        .Eslogan{
-            font-size: 50px;
-        }
-
-        .Eslogan1{
-            text-align: center;
-        }
-
-        .Eslogan2 {
-            color: var(--ColorKODA);
-            text-align: center;
-        }
-
-        .Presentacion:hover .Eslogan1{
-            color: var(--ColorKODA);
-        }
-
-        .Presentacion:hover .Eslogan2{
-            color: var(--ColordeFuente);
-        }
-
-        .Adopciones {
-            margin: 15px;
-            border-radius: 8px;
-            background-color: var(--ColorPrincipal);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -136,8 +21,7 @@
     <header>
         <div class="Encabezado">
             <div class="LogoyTitulo">
-                <img src="Imagenes/Recursos Pagina Web/Logo.png" alt="Dibujo de perro tipo Schnauzer con fondo naranja"
-                    width="70px">
+                <img class="Logo" src="Imagenes/Recursos Pagina Web/Logo.png" alt="Dibujo de perro tipo Schnauzer con fondo naranja">
                 <h1>Refugio Koda</h1>
             </div>
 
@@ -164,17 +48,11 @@
                 <h2 class="Eslogan1">Expertos en Sanar</h2>
                 <h2 class="Eslogan2">Heridas y Corazones</h2>
             </div>
-            <img src="Imagenes/Recursos Pagina Web/Portada.jpeg" alt="Dos perros relajados en un balcón" width="500px">
+            <img src="Imagenes/Recursos Pagina Web/Portada.jpeg" alt="Dos perros relajados en un balcón">
         </div>
 
-        <section id="Adopta" class="Adopciones">
-            <h2>Listos para Adoptar</h2>
-            <div class="ContenedorCarrusel">
-                <img src="Imagenes/Fotos para Adopción/Masimo.jpeg" alt="Perro café, mezcla de Pitbull">
-                <img src="Imagenes/Fotos para Adopción/Chia.jpeg" alt="Perra mezcla de Cocker">
-                <img src="Imagenes/Fotos para Adopción/Luca.jpeg" alt="Cachorro negro con blanco">
-            </div>
-        </section>
+        
+
 
     </main>
     <footer></footer>
