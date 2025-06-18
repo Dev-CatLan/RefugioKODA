@@ -1,13 +1,10 @@
-* {
-    /*Selector universal */
+* { /*Selector universal */
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
-    /*Contenido+Padding */
+    box-sizing: border-box; /*Contenido+Padding */
 }
 
 :root {
-    --titulos: #466455;
     --ColorPrincipal: white;
     --ColordeFuente: rgb(0, 0, 0);
     --ColordeFondo: rgb(207, 207, 207);
@@ -34,9 +31,11 @@ header {
     justify-content: space-between;
 }
 
-.Encabezado img {
-    max-width: 100%;
-    height: auto;
+.Logo{
+    height: 10%;
+    width: auto;
+    max-width: 75px;
+    min-width: 20px;
 }
 
 .LogoyTitulo {
