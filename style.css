@@ -50,21 +50,14 @@ header {
     gap: 5px;
 }
 
-
-.Menu ul {
+.MenuLista{
+    list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 15px;
+    align-items: center; /*Alinea boton naranja*/
 }
 
-.Menu li {
-    list-style-type: none;
-    display: flex;
-    gap: 25px;
-    cursor: pointer;
-    align-items: center;
-}
-
-.Menu li a {
+.MenuLista li a{
     text-decoration: none;
     color: var(--ColordeFuente);
 }
