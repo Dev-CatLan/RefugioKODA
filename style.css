@@ -1,7 +1,7 @@
 * {
     /*Selector universal */
-    padding: 0px;
     margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     /*Contenido+Padding */
 }
@@ -22,21 +22,17 @@ body {
 }
 
 header {
-    background-color: var(--ColorPrincipal);
-    width: 100%;
-    position: sticky;
-    top: 0;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
+    background-color: var(--ColorPrincipal);
+    width: 100%;
 }
 
 .Logo {
-    height: 10%;
     width: auto;
-    max-width: 75px;
-    min-width: 35px;
+    max-width: 70px;
 }
 
 .Titulo {
@@ -83,13 +79,43 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 560px) {
+
     .AbrirMenu,
     .CerrarMenu {
         display: block;
     }
 
-    .Menu{
+    .AbrirMenu {
+        border: none;
+        background-color: var(--ColorPrincipal);
+        font-size: 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .CerrarMenu {
+        border: none;
+        background-color: var(--ColorKODA);
+        font-size: 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .DonaBoton {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: var(--ColordeFuente);
+        background: var(--ColorPrincipal);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: 'Lexend Deca';
+        font-weight: 600;
+    }
+
+    .Menu {
         opacity: 0;
         visibility: hidden;
         display: flex;
@@ -103,9 +129,10 @@ header {
         background-color: var(--ColorKODA);
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 9;
     }
 
-    .Menuvisible{
+    .Menuvisible {
         opacity: 1;
         visibility: visible;
     }
