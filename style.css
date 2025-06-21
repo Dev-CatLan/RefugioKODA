@@ -50,14 +50,15 @@ header {
     gap: 5px;
 }
 
-.MenuLista{
+.MenuLista {
     list-style: none;
     display: flex;
     gap: 15px;
-    align-items: center; /*Alinea boton naranja*/
+    align-items: center;
+    /*Alinea boton naranja*/
 }
 
-.MenuLista li a{
+.MenuLista li a {
     text-decoration: none;
     color: var(--ColordeFuente);
 }
@@ -72,4 +73,47 @@ header {
     border-radius: 50px;
     cursor: pointer;
     font-family: 'Lexend Deca';
+}
+
+.AbrirMenu {
+    display: none;
+}
+
+.CerrarMenu {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .AbrirMenu,
+    .CerrarMenu {
+        display: block;
+    }
+
+    .Menu{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--ColorKODA);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .Menuvisible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .MenuLista {
+        flex-direction: column;
+        align-items: end;
+    }
+
+
 }
