@@ -25,23 +25,30 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 1%;
     background-color: var(--ColorPrincipal);
     width: 100%;
     position: sticky;
     top: 0;
 }
 
+.HeroSection:hover {
+    .Eslogan1 {
+        color: var(--ColorKODA);
+    }
+
+    .Eslogan2 {
+        color: var(--ColordeFuente);
+    }
+}
+
 .Logo {
-    width: auto;
-    max-width: 70px;
+    height: 70px;
 }
 
 .Titulo {
-    font-size: clamp(1.6rem, 5vw, 2rem);
-        /*Mínimo, ideal, Máximo*/
-    font-family: 'Chewy';
-    /*Fuente agregada desde HTML5*/
+    font-size: clamp(1rem, 4vw, 2rem);
+    /*Mínimo, ideal, Máximo*/
 }
 
 .LogoyTitulo {
@@ -53,9 +60,19 @@ header {
 .MenuLista {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
     /*Alinea boton naranja*/
+    font-size: clamp(12px, 1.7vw, 17px);
+
+}
+
+.MenuLista li {
+    transition: transform 0.2s ease;
+}
+
+.MenuLista li:hover {
+    transform: scale(1.1);
 }
 
 .MenuLista li a {
@@ -63,11 +80,15 @@ header {
     color: var(--ColordeFuente);
 }
 
+.MenuLista li a:hover {
+    color: var(--ColorKODA);
+}
+
 .DonaBoton {
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    color: white;
+    color: var(--ColorPrincipal);
     background: var(--ColorKODA);
     border: none;
     border-radius: 50px;
@@ -83,7 +104,7 @@ header {
     display: none;
 }
 
-.HeroSection{
+.HeroSection {
     background-color: var(--ColorPrincipal);
     margin: 15px;
     margin-top: 15px;
@@ -91,25 +112,82 @@ header {
     height: auto;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
-.HeroSection img{
+.HeroSection img {
     margin: 1rem;
-    max-height: 450px;
+    max-height: 400px;
+    width: 95%;
+    min-width: 250px;
     border-radius: 10px 30px 60px 120px;
 }
 
-.EsloganyUVP{
+.EsloganyUVP {
     text-align: center;
+    width: 95%;
+    min-width: 250px;
 }
 
-.Eslogan{
-    font-size: 30px;
-    padding: 1rem;
+.Eslogan {
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
 }
 
+.Eslogan2 {
+    color: var(--ColorKODA);
+}
 
-@media screen and (max-width: 560px) {
+.UVP {
+    margin: 1rem;
+    font-size: clamp(10px, 1.5vw, 20px);
+}
+
+.MenuyBoton {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 550px) {
+
+    header {
+        margin-bottom: 5px;
+    }
+
+    .HeroSection {
+        margin: 0;
+        padding-top: 9px;
+        border-radius: 0px;
+        width: 100%;
+    }
+
+    .HeroSection img {
+        display: none;
+    }
+
+    .HeroSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Logo {
+        height: 60px;
+    }
+
+    .DonaBoton {
+        font-size: 11px;
+        padding: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .Logo {
+        height: 40px;
+    }
+
+    .MenuyBoton {
+        gap: 5px;
+    }
 
     .AbrirMenu,
     .CerrarMenu {
@@ -117,9 +195,10 @@ header {
     }
 
     .AbrirMenu {
+        margin: 5px;
         border: none;
         background-color: var(--ColorPrincipal);
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 500;
         cursor: pointer;
     }
@@ -132,17 +211,8 @@ header {
         cursor: pointer;
     }
 
-    .DonaBoton {
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        color: var(--ColordeFuente);
-        background: var(--ColorPrincipal);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        font-family: 'Lexend Deca';
-        font-weight: 600;
+    .MenuLista li a:hover {
+        color: var(--ColorPrincipal);
     }
 
     .Menu {
@@ -172,5 +242,16 @@ header {
         align-items: end;
     }
 
+}
+
+@media screen and (max-width: 350px) {
+
+    .HeroSection img {
+        display: block;
+        border-radius: 30px 60px;
+        max-height: 350px;
+        width: 90%;
+        min-width: 240px;
+    }
 
 }

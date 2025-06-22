@@ -13,10 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <!--Lexend Deca by Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
-    <!--Chewy by Google fonts -->
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,19 +25,19 @@
                 class="Logo">
             <h1 class="Titulo">Refugio Koda</h1>
         </div>
-        <button id="abrir" class="AbrirMenu">☰</button>
 
-        <nav class="Menu" id="nav">
-            <button id="cerrar" class="CerrarMenu">&times;</button>
-            <ul class="MenuLista">
-                <li><a href="#Adopta">Adopta</a></li>
-                <li><a href="#Reporta">Reporta</a></li>
-                <li><a href="#Voluntariados">Voluntariados</a></li>
-                <li>
-                    <button class="DonaBoton" onclick="location.href='#Dona'">Dona</button>
-                </li>
-            </ul>
-        </nav>
+        <div class="MenuyBoton">
+            <button id="abrir" class="AbrirMenu">☰</button>
+            <nav class="Menu" id="nav">
+                <button id="cerrar" class="CerrarMenu">&times;</button>
+                <ul class="MenuLista">
+                    <li><a href="#Adopta">Adopta</a></li>
+                    <li><a href="#Reporta">Reporta</a></li>
+                    <li><a href="#Voluntariados">Voluntariados</a></li>
+                </ul>
+            </nav>
+            <button class="DonaBoton" onclick="location.href='#Dona'">Dona</button>
+        </div>
     </header>
 
     <main>
@@ -52,7 +48,8 @@
             </div>
             <div class="EsloganyUVP">
                 <div class="Eslogan">
-                    <h2>Medicina para sus heridas, Amor para su corazón</h2>
+                    <h2 class="Eslogan1">Medicina para sus heridas,</h2>
+                    <h2 class="Eslogan2"> Amor para su corazón</h2>
                 </div>
                 <div class="UVP">
                     <p>Refugio abierto a <b>TODO</b> tipo de animales,</p>
