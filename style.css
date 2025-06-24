@@ -153,7 +153,7 @@ header {
     gap: 20px;
 }
 
-.HeroyAdopcion{
+.HeroyAdopcion {
     background-color: var(--ColorKODA);
 }
 
@@ -161,18 +161,56 @@ header {
     background-color: var(--ColorKODA);
     border-end-end-radius: 100px;
     border-bottom-left-radius: 100px;
-    padding: 50px;
-
+    padding-top: 25px;
 }
+
+.Contenedor-General {
+    display: flex;
+}
+
 
 #Adopciones h3 {
-    font-size: clamp(35px, 2.5vw, 55px);
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
+    color: white;
+    text-align: center;
+    width: 95%;
+    min-width: 250px;
+    font-size: clamp(1.7rem, 2.5vw, 2.5rem);
 }
 
-.AdopcionyReportes{
+.Carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scrollbar-width: none;
+    /*Firefox*/
+    -ms-overflow-style: none;
+}
+
+.Carrusel::-webkit-scrollbar {
+    display: none;
+    /*Chrome,Safari,Opera*/
+}
+
+.elemento {
+    flex: 1 0 auto;
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.elemento img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 25px;
+}
+
+
+.elemento img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.AdopcionyReportes {
     background-color: var(--ColorPrincipal);
 }
 
@@ -183,21 +221,9 @@ header {
     padding: 50px;
 }
 
-.Carrusel{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: scroll;
-}
 
-.elemento{
-    flex: 1 0 auto; /*No encoje*/
-    margin: 0 50px;
-    background-color: rgb(255, 255, 255);
-    width: 200px;
-    height: 200px;
-}
 
-.ReportesyVoluntarios{
+.ReportesyVoluntarios {
     background-color: var(--ColorKODA);
 }
 
@@ -210,7 +236,7 @@ header {
     align-items: center;
 }
 
-.VoluntariosyDona{
+.VoluntariosyDona {
     background-color: var(--ColorPrincipal);
 }
 
@@ -222,10 +248,6 @@ header {
 
 
 @media screen and (max-width: 550px) {
-
-    header {
-        margin-bottom: 5px;
-    }
 
     .HeroSection {
         margin: 0;
