@@ -12,6 +12,8 @@
     --ColordeFondo: rgb(207, 207, 207);
     --ColorSeparador: Blue;
     --ColorKODA: #fda31b;
+    --marginBase: 15px;
+    --borderBase: 8px;
 }
 
 body {
@@ -30,16 +32,6 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
-}
-
-.HeroSection:hover {
-    .Eslogan1 {
-        color: var(--ColorKODA);
-    }
-
-    .Eslogan2 {
-        color: var(--ColordeFuente);
-    }
 }
 
 .Logo {
@@ -96,6 +88,10 @@ header {
     font-family: 'Lexend Deca';
 }
 
+.DonaBoton:hover {
+    transform: scale(1.1);
+}
+
 .AbrirMenu {
     display: none;
 }
@@ -106,9 +102,8 @@ header {
 
 .HeroSection {
     background-color: var(--ColorPrincipal);
-    margin: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
+    border-end-end-radius: 100px;
+    border-bottom-left-radius: 100px;
     height: auto;
     display: flex;
     align-items: center;
@@ -117,10 +112,20 @@ header {
 
 .HeroSection img {
     margin: 1rem;
-    max-height: 400px;
+    max-height: 500px;
     width: 95%;
     min-width: 250px;
     border-radius: 10px 30px 60px 120px;
+}
+
+.HeroSection:hover {
+    .Eslogan1 {
+        color: var(--ColorKODA);
+    }
+
+    .Eslogan2 {
+        color: var(--ColordeFuente);
+    }
 }
 
 .EsloganyUVP {
@@ -147,6 +152,74 @@ header {
     align-items: center;
     gap: 20px;
 }
+
+.HeroyAdopcion{
+    background-color: var(--ColorKODA);
+}
+
+#Adopciones {
+    background-color: var(--ColorKODA);
+    border-end-end-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 50px;
+
+}
+
+#Adopciones h3 {
+    font-size: clamp(35px, 2.5vw, 55px);
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.AdopcionyReportes{
+    background-color: var(--ColorPrincipal);
+}
+
+#Reportes {
+    background-color: var(--ColorPrincipal);
+    border-end-end-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 50px;
+}
+
+.Carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.elemento{
+    flex: 1 0 auto; /*No encoje*/
+    margin: 0 50px;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 200px;
+}
+
+.ReportesyVoluntarios{
+    background-color: var(--ColorKODA);
+}
+
+#Voluntariados {
+    background-color: var(--ColorKODA);
+    border-end-end-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.VoluntariosyDona{
+    background-color: var(--ColorPrincipal);
+}
+
+#Dona {
+    background-color: var(--ColorPrincipal);
+    border-radius: var(--borderBase);
+    padding: 50px;
+}
+
 
 @media screen and (max-width: 550px) {
 
@@ -244,7 +317,7 @@ header {
 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
 
     .HeroSection img {
         display: block;

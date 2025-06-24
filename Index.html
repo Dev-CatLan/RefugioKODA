@@ -13,7 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <!--Lexend Deca by Google fonts -->
-
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAAPj8fmdl7FQuG2-T4IFWR2yJwuYCWTy5delxjsCL_JYVwuGjGn869aVwesFEmd_F8xLzllkAuYgTu6cM&components=hosted-buttons&disable-funding=venmo&currency=USD">
+        </script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,8 +33,8 @@
             <nav class="Menu" id="nav">
                 <button id="cerrar" class="CerrarMenu">&times;</button>
                 <ul class="MenuLista">
-                    <li><a href="#Adopta">Adopta</a></li>
-                    <li><a href="#Reporta">Reporta</a></li>
+                    <li><a href="#Adopciones">Adopta</a></li>
+                    <li><a href="#Reportes">Reporta</a></li>
                     <li><a href="#Voluntariados">Voluntariados</a></li>
                 </ul>
             </nav>
@@ -42,33 +44,71 @@
 
     <main>
 
-        <div class="HeroSection">
-            <div class="Img">
-                <img src="/Imagenes/Recursos Pagina Web/Portada.jpeg" alt="Dos perros relajados en un balcón">
-            </div>
-            <div class="EsloganyUVP">
-                <div class="Eslogan">
-                    <h2 class="Eslogan1">Medicina para sus heridas,</h2>
-                    <h2 class="Eslogan2"> Amor para su corazón</h2>
+        <div class="HeroyAdopcion">
+            <div class="HeroSection">
+                <div class="Img">
+                    <img src="Imagenes/Recursos Pagina Web/Portada.jpeg" alt="Dos perros relajados en un balcón">
                 </div>
-                <div class="UVP">
-                    <p>Refugio abierto a <b>TODO</b> tipo de animales,</p>
-                    <p>promovemos la adopción y el derecho a una vida digna</p>
+                <div class="EsloganyUVP">
+                    <div class="Eslogan">
+                        <h2 class="Eslogan1">Medicina para sus heridas,</h2>
+                        <h2 class="Eslogan2"> Amor para su corazón</h2>
+                    </div>
+                    <div class="UVP">
+                        <p>Refugio abierto a <b>TODO</b> tipo de animales,</p>
+                        <p>promovemos la adopción y el derecho a una vida digna</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="AdopcionyReportes">
+                <section id="Adopciones">
+                    <h3>Conoce a tu Nuevo Mejor Amigo</h3>
+                    <br>
+                    <div class="Carrusel">
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                        <div class="elemento"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="ReportesyVoluntarios">
+                <section id="Reportes">
+                    <h3>Reportes</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima excepturi ipsam exercitationem laborum itaque aspernatur inventore ullam asperiores velit nihil laudantium ducimus nostrum sed, illo quidem vitae voluptatibus sunt reiciendis sit ab, dignissimos eum eaque debitis! Cupiditate nesciunt hic cum facere ab, debitis aspernatur perferendis? Accusantium, earum quos nesciunt quis minus amet quasi consequatur. Laudantium accusantium voluptatum placeat iusto in tenetur nihil quae dicta, facilis illum eum impedit esse, nisi cum quo illo distinctio dolorem voluptatem quis ratione eaque ducimus amet id sit! Dolorem veniam totam, ex earum molestiae inventore nisi cumque perspiciatis ipsam. Ipsa aliquid exercitationem amet reprehenderit nihil!</p>
+                </section>
+            </div>
+
+            <div class="VoluntariosyDona">
+                <section id="Voluntariados">
+                    <h3>Voluntariados</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum in impedit harum praesentium saepe nemo architecto id at autem incidunt sunt esse provident rerum nobis iste natus, error cupiditate consectetur sed soluta! Placeat ducimus alias error a necessitatibus quos, voluptate omnis. Itaque commodi sint quibusdam, cum sapiente praesentium autem quisquam perferendis sed dolore dignissimos, veniam explicabo nisi tenetur perspiciatis fugiat odio iste illo voluptates porro! Rerum ipsam dolore expedita! Nobis non, necessitatibus illum dolorum deleniti doloribus perferendis tempora! Hic atque, repudiandae cupiditate quod dolorum saepe. Pariatur vel amet, numquam, unde ab et consectetur, id commodi ullam voluptates aperiam libero labore?</p>
+                </section>
+            </div>
+
+            <section id="Dona">
+                <h3>Dona</h3>
+                <br>
+                <div id="paypal-container-P2VR57Q6JB77E"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "P2VR57Q6JB77E",
+                    }).render("#paypal-container-P2VR57Q6JB77E")
+                </script>
+            </section>
         </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam officia doloremque assumenda, ratione
-            minima praesentium repellat eligendi recusandae provident facere deserunt dolore inventore quaerat, animi
-            molestias, maiores delectus voluptatem saepe quos ipsam. Nobis inventore veniam ducimus asperiores adipisci
-            veritatis repudiandae, animi laudantium ullam, soluta commodi? Quis eveniet ab numquam cum itaque iusto, eum
-            est facilis ratione quidem eaque tempora soluta repudiandae sed! Aliquam incidunt nobis facilis ex modi quo
-            nam fuga hic, enim obcaecati inventore animi ducimus dolorum quis eos voluptatibus iste dolore praesentium
-            aperiam dignissimos ut. Tenetur, ducimus? Modi autem optio necessitatibus odio facere, non neque nostrum
-            quisquam!</p>
     </main>
-    <footer></footer>
-    <script src="animacion.js"></script>
+    <footer> Refugio KODA 2025 Todos los derechos Reservados</footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
