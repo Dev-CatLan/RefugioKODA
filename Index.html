@@ -17,6 +17,7 @@
         src="https://www.paypal.com/sdk/js?client-id=BAAPj8fmdl7FQuG2-T4IFWR2yJwuYCWTy5delxjsCL_JYVwuGjGn869aVwesFEmd_F8xLzllkAuYgTu6cM&components=hosted-buttons&disable-funding=venmo&currency=USD">
         </script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4fbec67eb7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 
         <div class="MenuyBoton">
             <button id="abrir" class="AbrirMenu">☰</button>
-            <nav class="Menu" id="nav">
+            <nav class="Menu" id="nav" role="navigation" aria-label="Menú principal"> <!--Lectores de pantalla-->
                 <button id="cerrar" class="CerrarMenu">&times;</button>
                 <ul class="MenuLista">
                     <li><a href="#Adopciones">Adopta</a></li>
@@ -38,8 +39,7 @@
                     <li><a href="#Voluntariados">Voluntariados</a></li>
                 </ul>
             </nav>
-            <button class="DonaBoton" onclick="location.href='#Dona'">Dona</button>
-        </div>
+<a href="#Dona" class="DonaBoton">Dona</a>        </div>
     </header>
 
     <main>
@@ -63,25 +63,49 @@
 
             <div class="AdopcionyReportes">
                 <section id="Adopciones">
-                    <h3>Conoce a tu Nuevo Mejor Amigo</h3>
-                    <br>
-                    <div class="Carrusel">
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Athos.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Chia.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Doki.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Hachi.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Luca.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Masimo.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Rammus.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Sif.jpeg" alt=""></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Sky.jpeg" alt=""></div>
+                    <h2>Conoce a tu Nuevo Mejor Amigo</h2>
+                    <div class="ContenedorCarrusel">
+                        <button id="Izquierda" class="Izquierda"><i class="fa-duotone fa-solid fa-arrow-left"
+                                aria-hidden="true"></i></button>
+                        <div class="Carrusel">
+
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Athos.jpeg"
+                                    alt="Perro mediano negro y café mezcla de Cocker y Pastor Alemán">
+                            </div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Chia.jpeg"
+                                    alt="Cachorra mediana mezcla de Golden Retriever">
+                            </div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Doki.jpeg"
+                                    alt="Perro Chihuahua de cabello parchado blanco y café">
+                            </div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Hachi.jpeg"
+                                    alt="Perra mediana de cabello parchado blanco y café">
+                            </div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Luca.jpeg"
+                                    alt="Perro de talla pequeña negro con blanco">
+                            </div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Masimo.jpeg"
+                                    alt="Perro grande, café, mezcla de Pitbull ">
+                            </div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Rammus.jpeg"
+                                    alt="Erizo africano pequeño"></div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Sif.jpeg"
+                                    alt="Gato blanco con negro tamaño mediana">
+                            </div>
+                            <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Sky.jpeg"
+                                    alt="Gata blanca de ojos azules talla mediana">
+                            </div>
+                        </div>
+                        <button id="Derecha" class="Derecha"><i class="fa-duotone fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></button>
                     </div>
+
                 </section>
             </div>
 
             <div class="ReportesyVoluntarios">
                 <section id="Reportes">
-                    <h3>Reportes</h3>
+                    <h2>Reportes</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima excepturi ipsam exercitationem
                         laborum itaque aspernatur inventore ullam asperiores velit nihil laudantium ducimus nostrum sed,
                         illo quidem vitae voluptatibus sunt reiciendis sit ab, dignissimos eum eaque debitis! Cupiditate
@@ -96,7 +120,7 @@
 
             <div class="VoluntariosyDona">
                 <section id="Voluntariados">
-                    <h3>Voluntariados</h3>
+                    <h2>Voluntariados</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum in impedit harum praesentium
                         saepe nemo architecto id at autem incidunt sunt esse provident rerum nobis iste natus, error
                         cupiditate consectetur sed soluta! Placeat ducimus alias error a necessitatibus quos, voluptate
@@ -109,7 +133,7 @@
             </div>
 
             <section id="Dona">
-                <h3>Dona</h3>
+                <h2>Dona</h2>
                 <br>
                 <div id="paypal-container-P2VR57Q6JB77E"></div>
                 <script>

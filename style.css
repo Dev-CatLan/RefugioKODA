@@ -77,6 +77,7 @@ header {
 }
 
 .DonaBoton {
+    text-decoration: none;
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -162,23 +163,62 @@ header {
     border-end-end-radius: 100px;
     border-bottom-left-radius: 100px;
     padding-top: 25px;
-}
-
-.Contenedor-General {
+    padding-bottom: 30px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-
-#Adopciones h3 {
-    color: white;
-    text-align: center;
+#Adopciones h2 {
+    color: var(--ColorPrincipal);
     width: 95%;
     min-width: 250px;
     font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+    padding-bottom: 10px;
+}
+
+.ContenedorCarrusel {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Izquierda {
+    font-size: 30px;
+    border: none;
+    margin-left: 10px;
+    padding: 5px;
+    background-color: var(--ColorPrincipal);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.Derecha {
+    font-size: 30px;
+    border: none;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: var(--ColorPrincipal);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    .Izquierda {
+        display: none;
+    }
+
+    .Derecha {
+        display: none;
+    }
+
 }
 
 .Carrusel {
     display: flex;
+    max-width: 100%;
     flex-wrap: nowrap;
     overflow: scroll;
     scrollbar-width: none;
@@ -202,12 +242,10 @@ header {
     height: auto;
     max-height: 300px;
     border-radius: 25px;
-}
-
-
-.elemento img:hover {
+    background-color: var(--ColorPrincipal);
+    padding: 5px;
+    object-fit: cover;
     cursor: pointer;
-    transform: scale(1.1);
 }
 
 .AdopcionyReportes {
@@ -220,7 +258,6 @@ header {
     border-bottom-left-radius: 100px;
     padding: 50px;
 }
-
 
 
 .ReportesyVoluntarios {
@@ -247,11 +284,11 @@ header {
 }
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
 
     .HeroSection {
         margin: 0;
-        padding-top: 9px;
+        padding-top: 10px;
         border-radius: 0px;
         width: 100%;
     }
@@ -337,6 +374,9 @@ header {
         align-items: end;
     }
 
+    .elemento img {
+    max-height: 200px;
+
 }
 
 @media screen and (max-width: 400px) {
@@ -348,5 +388,3 @@ header {
         width: 90%;
         min-width: 240px;
     }
-
-}
