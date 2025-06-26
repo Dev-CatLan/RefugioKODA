@@ -1,11 +1,21 @@
 /*1. Seleccionar elemento
-2. Acción que sucederá
-3. Clave para ejecutar
+2. Clave para ejecutar
+3. Acción 
 */
 
-window.scroll({
-  behavior: "smooth",
+document.querySelectorAll('a[href^="#"]').forEach(Lista => { 
+  Lista.addEventListener("click", function (e) {
+    e.preventDefault();
+    const MenuItem = document.querySelector(this.getAttribute("href"));
+    if (MenuItem) {
+      MenuItem.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+              nav.classList.remove("Menuvisible");
+      }, 400);
+    }
+  });
 });
+
 
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
