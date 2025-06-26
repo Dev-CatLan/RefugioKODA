@@ -110,49 +110,38 @@
         <div class="ReportesyVoluntarios">
             <section id="Reportes">
                 <div class="Formulario">
-                    <h2>Reporta</h2>
+                    <h2>Reporta un Caso</h2>
                     <br>
-                    <form action="https://getform.io/f/bronwwna" method="POST">
-                        <label for="name">Nombre</label>
-                        <input type="text" name="name" id="name" placeholder="Nombre">
+                    <form action="https://getform.io/f/bronwwna" method="POST" enctype="multipart/form-data">
 
-                        <label for="email">Correo</label>
-                        <input type="email" name="email" id="email" placeholder="ejemplo@correo.com">
+                        <div class="location">
+                            <label for="Ubicacion">📍 Ubicación</label>
+                            <input type="text" id="ubicacion" name="Ubicacion"
+                                placeholder="Ej: Zona 11 Ciudad de Guatemala" required>
+                        </div>
 
-                        <label for="message">Reporte</label>
-                        <input type="text" name="message" id="message" placeholder="información del caso...">
+                        <div class="Informacion">
+                            <label for="Caso">📝 Caso/Situación</label>
+                            <textarea id="caso" name="Caso" placeholder="Descripción del Caso" required></textarea>
+                        </div>
 
-                        <label for="image">Fotografías</label>
-                        <input type="images" name="images" id="images" placeholder="Imagenes">
+                        <div class="FotosdelCaso">
+                            <label for="Fotos">📸 Fotos del Caso</label>
+                            <input type="file" id="fotos" name="Fotos" accept="image/*" required>
+                        </div>
 
-                        <label for="checkbox">Terminos y COndiciones</label>
-                        <input type="checkbox" name="DDA">
-                        <button type="submit">Send</button>
+                        <div class="Acuerdo">
+                            <input type="checkbox" id="DDA" name="DDA" aria-label="Autorizo uso de imágenes" required>
+                            <label for="DDA">Declaro que autorizo el uso de las imágenes compartidas para fines de
+                                difusión y seguimientos del caso.</label>
+                        </div>
+
+                        <div class="BotonReporte">
+                            <button type="submit">Enviar mi Reporte</button>
+                        </div>
                     </form>
                 </div>
-                <div class="Problema">
-                    <h3>¿Por qué es importante reportar?</h3>
-                    <br>
-                    <p>El Congreso de la República de Guatemala aprobó la Ley de Protección y Bienestar Animal el 28 de
-                        febrero de 2017. En el artículo 14 se estipula que hay cinco libertades que poseen los animales:
-                    </p>
-                    <br>
-                    <ol>
-                        <li>Vivir libres de hambre, de sed y de desnutrición</li>
-                        <li>Vivir libres de temor y de angustia</li>
-                        <li>Vivir libres de molestias físicas y térmicas e incomodidad</li>
-                        <li>Vivir libres de dolor, de lesión y de enfermedad</li>
-                        <li>Vivir libres de manifestar sus comportamientos naturales</li>
-                    </ol>
-                    <br>
-                    <p>Pero en Guatemala las leyes no bastan, las denuncias no proceden, las emergencias avanzan mucho
-                        más rápido que la burocracia y los inocentes pagan el precio.</p>
-                    <p>Resgistramos un aproximado de 70 casos diarios de animales en situaciones vulnerables.
-                        Tristemente los refugios no podemos cubrir todos los casos, pero compartiendólos podemos llevar
-                        la información a la persona adecuada. Recuerda que un plato de comida o un poco de agua puede
-                        salvar su vida. Reportamos casos para hacer crecer nuestra red de apoyo, reportamos y
-                        compartimos con la esperanza de poner un ángel en su camino</p>
-                </div>
+                
 
             </section>
         </div>

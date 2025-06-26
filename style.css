@@ -80,7 +80,7 @@ header {
     font-size: clamp(12px, 1.7vw, 17px);
     text-decoration: none;
     padding: 0.7em 1.2em;
-    color: var(--ColorPrincipal);
+    color: var(--ColordeFuente);
     background: var(--ColorKODA);
     border: none;
     border-radius: 50px;
@@ -173,7 +173,7 @@ header {
 .CTA a {
     text-decoration: none;
     font-family: 'Lexend Deca';
-    color: var(--ColorPrincipal);
+    color: var(--ColordeFuente);
 
 }
 
@@ -204,9 +204,12 @@ header {
     min-width: 250px;
     font-size: clamp(1.7rem, 2.5vw, 2.5rem);
     padding-bottom: 10px;
+    border-bottom: 3px solid var(--ColorPrincipal);
+    letter-spacing: 1px;
 }
 
 .ContenedorCarrusel {
+    margin-top: 15px;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -293,12 +296,129 @@ header {
     border-bottom-left-radius: 100px;
     padding: 50px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #Reportes h2 {
     font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--ColorKODA);
 }
 
+
+#Reportes form {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding: 20px;
+    font-size: 22px;
+}
+
+#Reportes div {
+    margin-bottom: 15px;
+}
+
+#Reportes input,
+#Reportes textarea {
+    border-radius: 5px;
+    font-family: 'Lexend Deca';
+    width: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#Reportes textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#Reportes label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.FotosdelCaso {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#fotos::file-selector-button {
+    background-color: var(--ColorKODA);
+    color: var(--ColordeFuente);
+    font-family: 'Lexend Deca';
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#Reportes .Acuerdo {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+#Reportes input[type="checkbox"] {
+    appearance: none;
+    width: 55px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#Reportes input[type="checkbox"]:checked {
+    position: relative;
+}
+
+#Reportes input[type="checkbox"]:checked::after {
+    content: "X";
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Reportes .Acuerdo label {
+    font-weight: normal;
+    display: inline;
+    text-align: justify;
+}
+
+.BotonReporte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+
+#Reportes button {
+    padding: 0.7em 1.2em;
+    color: var(--ColordeFuente);
+    background: var(--ColorKODA);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+}
 
 .ReportesyVoluntarios {
     background-color: var(--ColorKODA);
@@ -325,109 +445,124 @@ header {
         max-height: 200px;
     }
 
-}
 
 
-@media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) {
 
-    .HeroSection {
-        margin: 0;
-        padding-top: 10px;
-        border-radius: 0px;
-        width: 100%;
+        .HeroSection {
+            margin: 0;
+            padding-top: 10px;
+            border-radius: 0px;
+            width: 100%;
+        }
+
+        .HeroSection img {
+            display: none;
+        }
+
+        .HeroSection {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Logo {
+            height: 50px;
+        }
+
+
+        .MenuyBoton {
+            gap: 5px;
+        }
+
+        .AbrirMenu,
+        .CerrarMenu {
+            display: block;
+        }
+
+        .AbrirMenu {
+            margin: 5px;
+            border: none;
+            background-color: var(--ColorPrincipal);
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .CerrarMenu {
+            border: none;
+            background-color: var(--ColorKODA);
+            font-size: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .MenuLista li a:hover {
+            color: var(--ColorPrincipal);
+        }
+
+        .Menu {
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 15px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--ColorKODA);
+            padding: 2rem;
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+            z-index: 9;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .Menuvisible {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+        }
+
+        .MenuLista {
+            flex-direction: column;
+            align-items: end;
+        }
+
     }
 
-    .HeroSection img {
-        display: none;
+    @media screen and (max-width: 485px) {
+
+        #Reportes {
+            padding: 30px;
+        }
+
+        #Reportes h2 {
+            font-size: 1.6rem;
+        }
+
+        #Reportes form {
+            font-size: 16px;
+        }
+
     }
 
-    .HeroSection {
-        display: flex;
-        flex-direction: column;
+
+    @media screen and (max-width: 400px) {
+
+        .HeroSection img {
+            display: block;
+            border-radius: 30px 60px;
+            max-height: 350px;
+            width: 90%;
+            min-width: 240px;
+        }
+
+        .ContenedorCarrusel {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
     }
-
-    .Logo {
-        height: 60px;
-    }
-
-    .Logo {
-        height: 40px;
-    }
-
-    .MenuyBoton {
-        gap: 5px;
-    }
-
-    .AbrirMenu,
-    .CerrarMenu {
-        display: block;
-    }
-
-    .AbrirMenu {
-        margin: 5px;
-        border: none;
-        background-color: var(--ColorPrincipal);
-        font-size: 1.3rem;
-        font-weight: 500;
-        cursor: pointer;
-    }
-
-    .CerrarMenu {
-        border: none;
-        background-color: var(--ColorKODA);
-        font-size: 1.5rem;
-        font-weight: 500;
-        cursor: pointer;
-    }
-
-    .MenuLista li a:hover {
-        color: var(--ColorPrincipal);
-    }
-
-    .Menu {
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 15px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--ColorKODA);
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-        z-index: 9;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .Menuvisible {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .MenuLista {
-        flex-direction: column;
-        align-items: end;
-    }
-
-}
-
-@media screen and (max-width: 400px) {
-
-    .HeroSection img {
-        display: block;
-        border-radius: 30px 60px;
-        max-height: 350px;
-        width: 90%;
-        min-width: 240px;
-    }
-
-    .ContenedorCarrusel {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-}

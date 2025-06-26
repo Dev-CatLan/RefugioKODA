@@ -1,17 +1,14 @@
-/*1. Seleccionar elemento
-2. Clave para ejecutar
-3. Acción 
-*/
-
-document.querySelectorAll('a[href^="#"]').forEach(Lista => { 
+document.querySelectorAll('a[href^="#"]').forEach(Lista => {
   Lista.addEventListener("click", function (e) {
     e.preventDefault();
     const MenuItem = document.querySelector(this.getAttribute("href"));
     if (MenuItem) {
       MenuItem.scrollIntoView({ behavior: "smooth" });
-      setTimeout(() => {
-              nav.classList.remove("Menuvisible");
-      }, 400);
+      if (nav.classList.contains("Menuvisible")) {
+        setTimeout(() => {
+          nav.classList.remove("Menuvisible");
+        }, 400);
+      }
     }
   });
 });
@@ -34,9 +31,9 @@ const Izquierda = document.querySelector("#Izquierda");
 const Derecha = document.querySelector("#Derecha");
 
 Izquierda.addEventListener("click", () => {
-  carrusel.scrollBy({left: -300, behavior: "smooth"});
+  carrusel.scrollBy({ left: -300, behavior: "smooth" });
 });
 
 Derecha.addEventListener("click", () => {
-  carrusel.scrollBy({left: 300, behavior: "smooth"});
+  carrusel.scrollBy({ left: 300, behavior: "smooth" });
 });
