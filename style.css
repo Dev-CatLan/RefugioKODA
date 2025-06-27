@@ -32,6 +32,7 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .Logo {
@@ -297,12 +298,16 @@ header {
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 #Reportes h2 {
     font-size: clamp(1.7rem, 2.5vw, 2.5rem);
     letter-spacing: 1px;
     border-bottom: 3px solid var(--ColorKODA);
+    margin-bottom: 10px;
 }
 
 
@@ -420,6 +425,48 @@ header {
     font-size: 15px;
 }
 
+.ContenedorReportes {
+    flex: 1 1 350px;
+    max-width: 600px;
+    min-width: 280px;
+}
+
+.ReportesMapa h3 {
+    font-size: clamp(1.2 rem, 2vw, 1.5rem);
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: var(--ColordeFuente);
+}
+
+.ReportesMapa {
+    flex: 2 1 500px;
+    /*Crece 2 veces en contenedor, encoge 1*/
+    min-width: 280px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.Mapa {
+    position: relative;
+    height: 0; /*Basado en el padding*/
+    width: 100%;
+    padding-bottom: 56.25%;
+    /*Estándar*/
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.Mapa iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
 .ReportesyVoluntarios {
     background-color: var(--ColorKODA);
 }
@@ -445,6 +492,14 @@ header {
         max-height: 200px;
     }
 
+    .Mapa{
+        padding-bottom: 100%;
+    }
+
+    #Reportes{
+        gap: 15px;
+    }
+}
 
 
     @media screen and (max-width: 600px) {
@@ -566,3 +621,5 @@ header {
         }
 
     }
+
+}

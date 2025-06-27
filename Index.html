@@ -109,10 +109,19 @@
 
         <div class="ReportesyVoluntarios">
             <section id="Reportes">
-                <div class="Formulario">
+                <div class="ContenedorReportes">
                     <h2>Reporta un Caso</h2>
-                    <br>
                     <form action="https://getform.io/f/bronwwna" method="POST" enctype="multipart/form-data">
+
+                        <div class="NombreReporta">
+                            <label for="POCreporte">👤 Nombre</label>
+                            <input type="text" id="POCreporte" name="POCreporte" placeholder="Luisa" required>
+                        </div>
+
+                        <div class="ContactoReporte">
+                            <label for="Contactoform">📱 Número de Teléfono</label>
+                            <input type="tel" id="Contactoform" name="Contactoform" placeholder="Ej: 43129291" required>
+                        </div>
 
                         <div class="location">
                             <label for="Ubicacion">📍 Ubicación</label>
@@ -141,7 +150,12 @@
                         </div>
                     </form>
                 </div>
-                
+                <div class="ReportesMapa">
+                    <h3>Reportes a Nivel Nacional</h3>
+                    <div class="Mapa">
+                            <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1vt13BgvleElf3Y6p4yPNPRC1DQ53BpQ&ehbc=2E312F&noprof=1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
 
             </section>
         </div>
