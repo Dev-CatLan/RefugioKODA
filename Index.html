@@ -18,6 +18,7 @@
         </script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4fbec67eb7.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <div class="MenuyBoton">
             <button id="abrir" class="AbrirMenu">☰</button>
             <nav class="Menu" id="nav" role="navigation" aria-label="Menú principal"> <!--Lectores de pantalla-->
-                <button id="cerrar" class="CerrarMenu">&times;</button>
+                <button id="cerrar" class="CerrarMenu" aria-label="Cerrar menú">&times;</button>
                 <ul class="MenuLista">
                     <li><a href="#Adopciones">Adopta</a></li>
                     <li><a href="#Reportes">Reporta</a></li>
@@ -69,45 +70,45 @@
             <section id="Adopciones">
                 <h2>Conoce a tu Nuevo Mejor Amigo</h2>
                 <div class="ContenedorCarrusel">
-                    <button id="Izquierda" class="Izquierda"><i class="fa-duotone fa-solid fa-arrow-left"
-                            aria-hidden="true"></i></button>
+                    <button id="Izquierda" class="Izquierda" aria-label="Navegar carrusel a la izquierda"><i
+                            class="fa-duotone fa-solid fa-arrow-left" aria-hidden="true"></i></button>
                     <div class="Carrusel">
 
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Athos.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Athos.jpeg"
                                 alt="Perro mediano negro y café mezcla de Cocker y Pastor Alemán">
                         </div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Chia.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Chia.jpeg"
                                 alt="Cachorra mediana mezcla de Golden Retriever">
                         </div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Doki.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Doki.jpeg"
                                 alt="Perro Chihuahua de cabello parchado blanco y café">
                         </div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Hachi.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Hachi.jpeg"
                                 alt="Perra mediana de cabello parchado blanco y café">
                         </div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Luca.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Luca.jpeg"
                                 alt="Perro de talla pequeña negro con blanco">
                         </div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Masimo.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Masimo.jpeg"
                                 alt="Perro grande, café, mezcla de Pitbull ">
                         </div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Rammus.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Rammus.jpeg"
                                 alt="Erizo africano pequeño"></div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Sif.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Sif.jpeg"
                                 alt="Gato blanco con negro tamaño mediana">
                         </div>
-                        <div class="elemento"><img src="/Imagenes/Fotos para Adopción/Sky.jpeg"
+                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Sky.jpeg"
                                 alt="Gata blanca de ojos azules talla mediana">
                         </div>
                     </div>
-                    <button id="Derecha" class="Derecha"><i class="fa-duotone fa-solid fa-arrow-right"
-                            aria-hidden="true"></i></button>
+                    <button id="Derecha" class="Derecha" aria-label="Navegar carrusel a la Derecha"><i
+                            class="fa-duotone fa-solid fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
 
             </section>
         </div>
 
-        <div class="ReportesyVoluntarios">
+        <div class="Reportesyproblematica">
             <section id="Reportes">
                 <div class="ContenedorReportes">
                     <h2>Reporta un Caso</h2>
@@ -146,50 +147,73 @@
                         </div>
 
                         <div class="BotonReporte">
-                            <button type="submit">Enviar mi Reporte</button>
+                            <button type="submit" aria-label="Enviar reporte">Enviar mi Reporte</button>
                         </div>
                     </form>
                 </div>
                 <div class="ReportesMapa">
                     <h3>Reportes a Nivel Nacional</h3>
                     <div class="Mapa">
-                            <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1vt13BgvleElf3Y6p4yPNPRC1DQ53BpQ&ehbc=2E312F&noprof=1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/d/u/2/embed?mid=1vt13BgvleElf3Y6p4yPNPRC1DQ53BpQ&ehbc=2E312F&noprof=1"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+            </section>
+
+         <div class="problematicayvoluntarios">
+               <section class="problematica">
 
             </section>
         </div>
 
-        <div class="VoluntariosyDona">
-            <section id="Voluntariados">
-                <h2>Voluntariados</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident aliquam illum a suscipit,
-                    doloremque obcaecati aliquid distinctio eius vel delectus natus voluptate quisquam doloribus,
-                    reiciendis eveniet saepe eos. Consequatur, voluptatem consequuntur distinctio nobis neque
-                    reiciendis, quam laboriosam voluptatibus, itaque quod dolorem eius quis maiores et similique veniam
-                    minus saepe quidem? Repellendus, temporibus atque. Cupiditate reiciendis cum pariatur repellat! Nisi
-                    expedita accusantium beatae dicta neque dignissimos consequatur. Voluptatem nobis doloribus sit
-                    incidunt soluta assumenda maiores rerum odio suscipit. Quidem sint, sapiente nostrum architecto
-                    dignissimos accusantium in repellat culpa laboriosam corrupti rem minus consectetur facilis aperiam
-                    mollitia. Magnam dicta excepturi earum? Assumenda eos repellendus et dolorum sunt rem sed corrupti
-                    cupiditate accusantium nemo molestias voluptatibus at ut doloremque dolorem, ullam voluptas officia
-                    est rerum necessitatibus modi, inventore aliquam! Quos sunt temporibus accusamus cupiditate et
-                    explicabo quibusdam perferendis rerum aliquid, eveniet veritatis esse laudantium beatae, tenetur quo
-                    assumenda ullam enim vitae non itaque aperiam quaerat deserunt nihil doloribus. Dolorum repellat
-                    dolorem corporis cumque fugiat hic, voluptates vel explicabo. Illo ratione laborum a esse illum
-                    corporis sequi deserunt nemo suscipit reiciendis, accusantium ea. Explicabo eum voluptas placeat
-                    quasi quam natus odit consequuntur sint adipisci! Iure maiores consequuntur doloribus iusto nisi
-                    laborum eaque optio aspernatur.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum in impedit harum praesentium
-                    saepe nemo architecto id at autem incidunt sunt esse provident rerum nobis iste natus, error
-                    cupiditate consectetur sed soluta! Placeat ducimus alias error a necessitatibus quos, voluptate
-                    omnis. Itaque commodi sint quibusdam, cum sapiente praesentium autem quisquam perferendis sed
-                    dolore dignissimos, veniam explicabo nisi tenetur perspiciatis fugiat odio iste illo voluptates
-                    porro! Rerum ipsam dolore expedita! Nobis non, necessitatibus illum dolorum deleniti doloribus
-                    perferendis tempora! Hic atque, repudiandae cupiditate quod dolorum saepe. Pariatur vel amet,
-                    numquam, unde ab et consectetur, id commodi ullam voluptates aperiam libero labore?</p>
-            </section>
-        </div>
+        <section id="Voluntariados">
+            <h2>Voluntariados</h2>
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <img src="/Imagenes/Recursos Pagina Web/pexels-nishizuka-25426-485294.jpeg"
+                        alt="Perro Chihuahua café tomando un baño">
+                    <h3>Baños</h3>
+                    <p>Muchos animalitos necesitan baños cada 4 o 5 días por problemas en la piel. Además cada 4
+                        semanas damos baños a todos los perritos del refugio</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="/Imagenes/Recursos Pagina Web/pexels-sam-lion-5732502.jpeg"
+                        alt="Niño paseando un perro en área verde">
+                    <h3>Paseos</h3>
+                    <p>El tiempo de paseo es vital para mantener la calma en el refugio, se hacen todos los días
+                        siempre y cuando el sol o lluvia no sean un problema</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="/Imagenes/Recursos Pagina Web/pexels-karolina-grabowska-4239035.jpeg"
+                        alt="Voluntarios realizando limpieza">
+                    <h3>Limpieza</h3>
+                    <p>Lavar sus platos y los patios nos ayuda a mantener el refugio libre de
+                        enfermedades y como un hogar digno, se hace cada día por la mañana y la tarde</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="/Imagenes/Recursos Pagina Web/Doki envuelto.jpeg" alt="Chihuahua envuelto en sabana">
+                    <h3>Tiempo de Calidad</h3>
+                    <p>Caricias, atención y amor son necesarias para hacerlos sentir vistos, puedes venir en cualquier
+                        momento del día, pero debes ser responsable</p>
+                </div>
+            </div>
+            <button onclick="mostrarcalendario()" id="SerVoluntario" class="CTA"
+                aria-label="Llenar form de voluntariado">Ser
+                Voluntario</button>
+
+            <div id="Oculto">
+                <button onclick="ocultarcalendario()" class="CTA"
+                    aria-label="Cerrar formulario de voluntariado">Cerrar</button>
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/mcatalancuellar/30min?hide_event_type_details=1"
+                    style="min-width:300px;height:700px;">
+                </div>
+            </div>
+
+        </section>
+         </div>
 
         <section id="Dona">
             <h2>Dona</h2>

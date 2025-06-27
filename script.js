@@ -37,3 +37,19 @@ Izquierda.addEventListener("click", () => {
 Derecha.addEventListener("click", () => {
   carrusel.scrollBy({ left: 300, behavior: "smooth" });
 });
+
+function mostrarcalendario(){
+  const calendario = document.getElementById("Oculto");
+  const botonSerVoluntario = document.getElementById("SerVoluntario");
+
+  calendario.style.display="block";
+  botonSerVoluntario.style.display="none"
+}
+
+function ocultarcalendario(){
+  const calendario = document.getElementById("Oculto");
+  const botonSerVoluntario= document.getElementById("SerVoluntario");
+
+  calendario.style.display="none";
+  botonSerVoluntario.style.display="block";
+}
