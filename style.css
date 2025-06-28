@@ -321,6 +321,11 @@ header {
     font-size: 22px;
 }
 
+#Reportes .Advertencia {
+    margin-top: 20px;
+    text-align: justify;
+}
+
 #Reportes div {
     margin-bottom: 15px;
 }
@@ -484,11 +489,36 @@ header {
     border-end-end-radius: 100px;
     border-bottom-left-radius: 100px;
     padding: 50px;
-    display: flex;
-    margin: 0;
+    position: relative;
 }
 
+.problematica h2 {
+    margin-bottom: 20px;
+    font-size: clamp(25px, 2.5vw, 35px);
+}
 
+.articulo {
+    padding: 40px;
+    margin-right: 100px;
+    background-color: var(--ColorPrincipal);
+    border-radius: 10px 30px 150px 60px;
+    width: 100%;
+    max-width: 1300px;
+    text-align: justify;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+.problematica img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 200px;
+    border-end-end-radius: 50px;
+}
 
 .problematicayvoluntarios {
     background-color: var(--ColorPrincipal);
@@ -551,7 +581,7 @@ header {
     margin: auto;
     margin-bottom: 10px;
     border: 1px solid var(--ColordeFuente);
-    font-size: clamp(13px, 2vw, 17px);
+    font-size: clamp(15px, 2vw, 17px);
 
 }
 
@@ -563,12 +593,53 @@ header {
     display: none;
 }
 
+.Beneficio {
+    background-color: var(--ColorKODA);
+    border-end-end-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 50px;
+    position: relative;
+}
+
+.ContenedorBeneficio h2 {
+    padding: 20px;
+    font-size: clamp(25px, 2.5vw, 35px);
+}
+
+.Beneficiosub{
+    padding: 40px;
+    margin-left: 100px;
+    background-color: var(--ColorPrincipal);
+    border-radius: 30px 10px 60px 150px;
+    width: 100%;
+    max-width: 1300px;
+    text-align: justify;
+}
+
+.ContenedorBeneficio img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 200px;
+    border-start-start-radius: 50px;
+}
+
+.BeneficioyDona {
+    background-color: var(--ColorPrincipal);
+}
+
 #Dona {
     background-color: var(--ColorPrincipal);
     padding: 50px;
 }
 
 @media screen and (max-width:800px) {
+
+    .UVP button {
+        margin-bottom: 20px;
+    }
+
     .elemento img {
         max-height: 200px;
     }
@@ -579,6 +650,10 @@ header {
 
     #Reportes {
         gap: 15px;
+    }
+
+    .problematica img {
+        max-width: 100px;
     }
 }
 
