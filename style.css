@@ -606,7 +606,6 @@ header .DonaBoton:hover {
 .ReportesMapa {
     flex: 2 1 500px;
     /*Crece 2 veces en contenedor, encoge 1*/
-    min-width: 280px;
     background-color: transparent;
     padding: 0;
 }
@@ -783,14 +782,98 @@ ol {
 /*FIN VOLUNTARIADO*/
 
 .NosotrosyDona {
-    background-color: var(--ColorKODA);
+    background-color: var(--ColorPrincipal);
 }
 
 /*INICIO NOSOTROS*/
-.Nosotros{
+
+#Nosotros {
     background-color: var(--ColorKODA);
+    border-end-end-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 50px;
 }
+
+#Nosotros h2 {
+    font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--ColorPrincipal);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.contenedorNosotros {
+    display: flex;
+}
+
+.Historia {
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: justify;
+}
+
+#Nosotros img {
+    max-width: 400px;
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px 30px 60px 120px;
+}
+
+
 /*FIN NOSOTROS*/
+
+
+/*INICIO DONA*/
+
+#Dona {
+    background-color: var(--ColorPrincipal);
+    padding: 40px;
+}
+
+#Dona h2 {
+    text-align: center;
+    font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--ColorKODA);
+    margin-bottom: 40px;
+}
+
+#paypal-container-FG7N5X5AEKJ7N {
+    text-align: center;
+}
+
+#paypal-form-fields-container-FG7N5X5AEKJ7N {
+    display: inline-block;
+}
+
+/*FIN DONA*/
+
+/*INICIO FOOTER*/
+
+footer {
+    font-size: clamp(12px, 1.7vw, 16px);
+    background-color: var(--ColorKODA);
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.fa-brands {
+    font-size: clamp(18px, 1.7vw, 25px);
+    padding: 5px;
+}
+
+
+.fa-brands:hover {
+    transform: scale(1.1);
+}
+
+/*FIN FOOTER*/
 
 @media screen and (max-width: 1450px) {
     .problematica img {
@@ -902,6 +985,10 @@ ol {
     #Adopciones .Derecha,
     .Izquierda {
         display: none;
+    }
+
+    .contenedorNosotros {
+        flex-direction: column;
     }
 
 
