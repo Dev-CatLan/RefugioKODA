@@ -2,54 +2,58 @@
 <html lang="es">
 
 <head>
+    <!--Meta Datos-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Meta Datos SEO-->
     <meta name="Description"
         content="Refugio guatemalteco organizado sin fines de lucro para el rescate y reubicación de animales en situaciones vulnerables">
     <meta name="Keywords" content="Refugio, rescate animal, refugio guatemalteco, adopcion">
     <meta name="Author" content="Mirka Catalán">
+
+    <!--Titulo-->
     <title>Refugio Koda</title>
+
+    <!--Preconexiones-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Fuentes Tipograficas-->
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-    <!--Lexend Deca by Google fonts -->
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=BAAPj8fmdl7FQuG2-T4IFWR2yJwuYCWTy5delxjsCL_JYVwuGjGn869aVwesFEmd_F8xLzllkAuYgTu6cM&components=hosted-buttons&disable-funding=venmo&currency=USD">
-        </script>
+
+    <!--Estilos-->
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/4fbec67eb7.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 
 <body>
 
     <header>
         <div class="LogoyTitulo">
-            <img src="Imagenes/Recursos Pagina Web/Logo.png" alt="Dibujo de perro tipo Schnauzer con fondo naranja"
+            <img src="/Images/Recursos_Web/Logo.png" alt="Dibujo de perro tipo Schnauzer con fondo naranja"
                 class="Logo">
             <h1 class="Titulo">Refugio Koda</h1>
         </div>
 
         <div class="MenuyBoton">
             <button id="abrir" class="AbrirMenu">☰</button>
-            <nav class="Menu" id="nav" role="navigation" aria-label="Menú principal"> <!--Lectores de pantalla-->
+            <nav class="Menu" id="nav" aria-label="Menú principal"> <!--Lectores de pantalla-->
                 <button id="cerrar" class="CerrarMenu" aria-label="Cerrar menú">&times;</button>
                 <ul class="MenuLista">
-                    <li><a href="#Adopciones">Adopta</a></li>
-                    <li><a href="#Reportes">Reporta</a></li>
-                    <li><a href="#Voluntariados">Voluntariados</a></li>
+                    <li><a href="#Adopciones"><i class="fa-solid fa-dog"></i>Adopta</a></li>
+                    <li><a href="#Reportes"><i class="fa-solid fa-notes-medical"></i>Reporta</a></li>
+                    <li><a href="#Voluntariados"><i class="fa-solid fa-handshake-angle"></i>Voluntariados</a></li>
+                    <li><a href="#Nosotros"><i class="fa-solid fa-users"></i>Nosotros</a></li>
                 </ul>
             </nav>
             <a href="#Dona" class="DonaBoton" aria-label="Ir a la sección de donaciones">Dona</a>
         </div>
     </header>
-
     <main>
-
         <div class="HeroyAdopcion">
             <div class="HeroSection">
                 <div class="Img">
-                    <img src="Imagenes/Recursos Pagina Web/Portada.jpeg" alt="Dos perros relajados en un balcón">
+                    <img src="Images/Recursos_Web/Portada.jpg" alt="Dos perros relajados en un balcón">
                 </div>
                 <div class="EsloganyUVP">
                     <div class="Eslogan">
@@ -59,70 +63,205 @@
                     <div class="UVP">
                         <p>Refugio abierto a <b>TODO</b> tipo de animales,</p>
                         <p>promovemos la adopción y el derecho a una vida digna</p>
-                        <button class="CTA" aria-label="Ir a la sección de Reportes"><a href="#Reportes">Reporta un
-                                Caso</a></button>
+                        <a href="#Reportes" class="CTA" aria-label="Reportar un caso">Reporta un Caso</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="AdopcionyReportes">
+        <div class="AdopcionyReporta">
             <section id="Adopciones">
                 <h2>Conoce a tu Nuevo Mejor Amigo</h2>
+                <p>Haz click en la foto para conocer los datos de cada amigo</p>
                 <div class="ContenedorCarrusel">
                     <button id="Izquierda" class="Izquierda" aria-label="Navegar carrusel a la izquierda"><i
                             class="fa-duotone fa-solid fa-arrow-left" aria-hidden="true"></i></button>
                     <div class="Carrusel">
 
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Athos.jpeg"
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Athos.jpg"
                                 alt="Perro mediano negro y café mezcla de Cocker y Pastor Alemán">
+                            <div class="dropdown">
+                                <h3>Athos</h3>
+                                <br>
+                                <p><b>Edad:</b> 3 años</p>
+                                <p><b>Sexo: </b>Macho</p>
+                                <p><b>Raza:</b> Mezcla de Pastor alemán y Cocker</p>
+                                <p><b>Personalidad:</b> Sociable con animales y personas</p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Chia.jpeg"
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Chia.jpg"
                                 alt="Cachorra mediana mezcla de Golden Retriever">
+                            <div class="dropdown">
+                                <h3>Chia</h3>
+                                <br>
+                                <p><b>Edad: </b>1 año</p>
+                                <p><b>Sexo: </b>Hembra</p>
+                                <p><b>Raza: </b>Mezcla de Golden Retriever y Cocker</p>
+                                <p><b>Personalidad:</b> Sociable con animales y personas </p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Doki.jpeg"
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Doki.jpg"
                                 alt="Perro Chihuahua de cabello parchado blanco y café">
+                            <div class="dropdown">
+                                <h3>Doki</h3>
+                                <br>
+                                <p><b>Edad: </b>6 años</p>
+                                <p><b>Sexo: </b>Macho</p>
+                                <p><b>Raza:</b> Chihuahua de pelo largo</p>
+                                <p><b>Personalidad:</b> Sociable con adultos, y algunos perros</p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Hachi.jpeg"
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Hachi.jpg"
                                 alt="Perra mediana de cabello parchado blanco y café">
+                            <div class="dropdown">
+                                <h3>Hachi</h3>
+                                <br>
+                                <p><b>Edad:</b> 5 años</p>
+                                <p><b>Sexo: </b>Hembra</p>
+                                <p><b>Raza:</b> Mestiza</p>
+                                <p><b>Personalidad:</b> Reactiva, necesita paciencia </p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Luca.jpeg"
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Luca.jpg"
                                 alt="Perro de talla pequeña negro con blanco">
+                            <div class="dropdown">
+                                <h3>Luca</h3>
+                                <br>
+                                <p><b>Edad:</b> 5 meses</p>
+                                <p><b>Sexo: </b>Macho</p>
+                                <p><b>Raza:</b> Mezcla de Chihuahua</p>
+                                <p><b>Personalidad:</b> Sociable con animales y personas </p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Masimo.jpeg"
-                                alt="Perro grande, café, mezcla de Pitbull ">
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Masimo.jpg"
+                                alt="Perro grande, café, mezcla de Pitbull">
+                            <div class="dropdown">
+                                <h3>Masimo</h3>
+                                <br>
+                                <p><b>Edad:</b> 3 años</p>
+                                <p><b>Sexo: </b>Macho</p>
+                                <p><b>Raza:</b> Mezcla de Pitbull</p>
+                                <p><b>Personalidad:</b> Sociable con animales y personas </p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Rammus.jpeg"
-                                alt="Erizo africano pequeño"></div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Sif.jpeg"
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Rammus.jpg" alt="Erizo africano pequeño">
+                            <div class="dropdown">
+                                <h3>Rammus</h3>
+                                <br>
+                                <p><b>Edad:</b> 2 años</p>
+                                <p><b>Sexo: </b>Macho</p>
+                                <p><b>Raza:</b> Erizo Africano</p>
+                                <p><b>Personalidad:</b> Poco sociable </p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
+                        </div>
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Sif.jpg"
                                 alt="Gato blanco con negro tamaño mediana">
+                            <div class="dropdown">
+                                <h3>Sif</h3>
+                                <br>
+                                <p><b>Edad:</b> 4 años</p>
+                                <p><b>Sexo: </b>Macho</p>
+                                <p><b>Raza:</b> Mestizo</p>
+                                <p><b>Personalidad:</b> Sociable con humanos </p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
-                        <div class="elemento"><img src="Imagenes/Fotos para Adopción/Sky.jpeg"
+                        <div class="elemento"><img src="Images/Fotos_Adopción/Sky.jpg"
                                 alt="Gata blanca de ojos azules talla mediana">
+                            <div class="dropdown">
+                                <h3>Sky</h3>
+                                <br>
+                                <p><b>Edad: </b>1 año</p>
+                                <p><b>Sexo: </b>Hembra</p>
+                                <p><b>Raza:</b> Mestiza</p>
+                                <p><b>Personalidad:</b> Sociable con animales y personas </p>
+                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button class="cerrardrop">x</button>
+                            </div>
                         </div>
                     </div>
                     <button id="Derecha" class="Derecha" aria-label="Navegar carrusel a la Derecha"><i
                             class="fa-duotone fa-solid fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
+                <div class="FormularioAdopcion">
+                    <h2>Pre-aplicación para Adopción</h2>
+                    <form action="https://formspree.io/f/xgvyrjoq" method="POST">
 
+                        <div class="Candidato">
+                            <label for="Candidato para Adopcion">👤 Nombre Completo</label>
+                            <input type="text" id="Candidato" name="Candidato" placeholder="Teresa Chavez" required>
+                        </div>
+
+                        <div class="edad">
+                            <label for="edad">🔢 Edad</label>
+                            <input type="number" id="edad" name="edad" placeholder="Ej: 30" required>
+                        </div>
+
+                        <div class="ContactoAdoptante">
+                            <label for="Contacto Adoptante">📱 Número de Teléfono</label>
+                            <input type="tel" id="ContactoAdoptante" name="ContactoAdoptante" placeholder="Ej: 43129291" required>
+                        </div>
+
+                        <div class="CorreoAdoptante">
+                            <label for="Correo del adoptante">📧 Correo Electrónico</label>
+                            <input type="email" id="CorreoAdoptante" name="CorreoAdoptante" placeholder="Ej: Teresa.Chavez@aol.com" required>
+                        </div>
+
+                        <div class="DPI">
+                            <label for="DPI">🪪 Documento de Identidad</label>
+                            <input type="text" id="DPI" name="DPI" placeholder="Número de DPI, Licencia o Pasaporte" required></input>
+                        </div>
+
+                        <div class="Trabajo">
+                            <label for="Trabajo">🧑‍🎓 Ocupación</label>
+                            <input type="text" id="trabajo" name="Trabajo" placeholder="Ej: Electricista" required>
+                        </div>
+
+                        <div class="Entendimiento">
+                            <input type="checkbox" id="Entendimiento" name="Entendimiento" aria-label="Entendimiento del proceso" required>
+                            <label for="Entendimiento">Entiendo que el proceso de adopción tiene multiples faces y que llenar este formulario no garantiza que podré adoptar un animal del Refugio KODA.</label>
+                        </div>
+
+
+                        <div class="BtnAplicacion">
+                            <button class="BotonAplicacion" type="submit" aria-label="Enviar Aplicacion">Enviar mi Aplicación</button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </div>
-
-        <div class="Reportesyproblematica">
+        <div class="ReporteyProblema">
             <section id="Reportes">
                 <div class="ContenedorReportes">
                     <h2>Reporta un Caso</h2>
                     <form action="https://getform.io/f/bronwwna" method="POST" enctype="multipart/form-data">
+
 
                         <div class="NombreReporta">
                             <label for="POCreporte">👤 Nombre</label>
                             <input type="text" id="POCreporte" name="POCreporte" placeholder="Luisa" required>
                         </div>
 
+
                         <div class="ContactoReporte">
                             <label for="Contactoform">📱 Número de Teléfono</label>
                             <input type="tel" id="Contactoform" name="Contactoform" placeholder="Ej: 43129291" required>
                         </div>
+
 
                         <div class="location">
                             <label for="Ubicacion">📍 Ubicación</label>
@@ -130,21 +269,25 @@
                                 placeholder="Ej: Zona 11 Ciudad de Guatemala" required>
                         </div>
 
+
                         <div class="Informacion">
                             <label for="Caso">📝 Caso/Situación</label>
                             <textarea id="caso" name="Caso" placeholder="Descripción del Caso" required></textarea>
                         </div>
+
 
                         <div class="FotosdelCaso">
                             <label for="Fotos">📸 Fotos del Caso</label>
                             <input type="file" id="fotos" name="Fotos" accept="image/*" required>
                         </div>
 
+
                         <div class="Acuerdo">
                             <input type="checkbox" id="DDA" name="DDA" aria-label="Autorizo uso de imágenes" required>
                             <label for="DDA">Declaro que autorizo el uso de las imágenes compartidas para fines de
                                 difusión y seguimientos del caso.</label>
                         </div>
+
 
                         <div class="BotonReporte">
                             <button type="submit" aria-label="Enviar reporte">Enviar mi Reporte</button>
@@ -159,25 +302,27 @@
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="Advertencia">
-                        <p><b>Nota Importante:</b> mapa de rescates y emergencias Koda muestra los casos que ya han sido
+                        <p><b>Nota Importante:</b> El mapa de rescates y emergencias Koda muestra los casos que ya han sido
                             evaluados por el personal del refugio. El contacto para más detalles sobre rescates, hogares
                             temporales y emergencias será solamente a través del refugio, tus datos no se comparten con
                             nadie más a menos que lo pidas.</p>
                     </div>
                 </div>
             </section>
-
-            <div class="problematicayvoluntarios">
-                <section class="problematica">
-                    <img src="Imagenes/Recursos Pagina Web/Doki.png" alt="Perro chihuahua con ojos saltones pensando"
+        </div>
+        <div class="ProblematicayVoluntariados">
+            <section class="problematica">
+                    <img src="/Images/Recursos_Web/Doki.png" alt="Perro chihuahua con ojos saltones pensando"
                         class="Perritopensador">
                     <h2>¿Por qué es importante reportar?</h2>
+
 
                     <div class="articulo">
                         <p>El Congreso de la República de Guatemala aprobó la Ley de Protección y Bienestar Animal el 28
                             de febrero del año 2017. En el artículo 14 se estipula que hay cinco libertades que poseen
                             los animales: </p>
                         <br>
+
 
                         <ol>
                             <li>Vivir libres de hambre, de sed y de desnutrición</li>
@@ -186,6 +331,7 @@
                             <li>Vivir libres de dolor, de lesión y de enfermedad</li>
                             <li>Vivir libres de manifestar sus comportamientos naturales</li>
                         </ol>
+
 
                         <br>
                         <p>Pero en Guatemala las leyes no bastan, las denuncias no proceden, las emergencias avanzan
@@ -200,36 +346,39 @@
                             compartimos porque la indiferencia mata.</p>
                     </div>
 
-                </section>
-            </div>
 
+                </section>
+        </div>
+        
+        <div class="VoluntariadosyNosotros">
             <section id="Voluntariados">
                 <h2>Voluntariados</h2>
                 <div class="tarjetas">
                     <div class="tarjeta">
-                        <img src="Imagenes/Recursos Pagina Web/pexels-nishizuka-25426-485294.jpeg"
+                        <img src="Images/Recursos_Web/pexels-nishizuka-25426-485294.jpg"
                             alt="Perro Chihuahua café tomando un baño">
                         <h3>Baños</h3>
                         <p>Muchos animalitos necesitan baños cada 4 o 5 días por problemas en la piel. Además cada 4
                             semanas damos baños a todos los perritos del refugio</p>
                     </div>
                     <div class="tarjeta">
-                        <img src="Imagenes/Recursos Pagina Web/pexels-sam-lion-5732502.jpeg"
+                        <img src="Images/Recursos_Web/pexels-sam-lion-5732502.jpg"
                             alt="Niño paseando un perro en área verde">
                         <h3>Paseos</h3>
                         <p>El tiempo de paseo es vital para mantener la calma en el refugio, se hacen todos los días
                             siempre y cuando el sol o lluvia no sean un problema</p>
                     </div>
 
+
                     <div class="tarjeta">
-                        <img src="Imagenes/Recursos Pagina Web/pexels-karolina-grabowska-4239035.jpeg"
+                        <img src="Images/Recursos_Web/pexels-karolina-grabowska-4239035.jpg"
                             alt="Voluntarios realizando limpieza">
                         <h3>Limpieza</h3>
                         <p>Lavar sus platos y los patios nos ayuda a mantener el refugio libre de
                             enfermedades y como un hogar digno, se hace cada día por la mañana y la tarde</p>
                     </div>
                     <div class="tarjeta">
-                        <img src="Imagenes/Recursos Pagina Web/Doki envuelto.jpeg" alt="Chihuahua envuelto en sabana">
+                        <img src="/Images/Recursos_Web/Doki-envuelto.jpg" alt="Chihuahua envuelto en sabana">
                         <h3>Tiempo de Calidad</h3>
                         <p>Caricias, atención y amor son necesarias para hacerlos sentir vistos, puedes venir en
                             cualquier
@@ -238,6 +387,7 @@
                 </div>
                 <button onclick="mostrarcalendario()" id="SerVoluntario" class="CTA"
                     aria-label="Llenar form de voluntariado">Ser Voluntario</button>
+
 
                 <div id="Oculto">
                     <button onclick="ocultarcalendario()" class="CTA"
@@ -248,41 +398,25 @@
                     </div>
                 </div>
 
+
+            </section>
+
+        </div>
+
+        <div class="NosotrosyDona">
+            <section class="Nosotros">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis illum, aspernatur aliquid minus laudantium reprehenderit beatae tenetur veritatis fugiat assumenda adipisci voluptatibus autem consequuntur placeat pariatur optio repellat rerum at voluptatem, iusto alias. Voluptatibus veniam distinctio ullam neque dolorum, error maiores facilis maxime quia, explicabo illo rerum porro cumque, consequuntur sunt harum aperiam corrupti placeat est pariatur unde at eveniet eius in! Rem corporis dolor esse expedita nulla id, alias quo blanditiis temporibus illum dolorem, veniam possimus, eligendi optio aliquid omnis quibusdam dignissimos! Obcaecati eum quod blanditiis, laudantium necessitatibus nam mollitia, ad commodi, veritatis architecto illo inventore fugit reiciendis odio? Minus eligendi, distinctio, rerum inventore minima saepe, assumenda quas veniam consectetur optio eveniet et perspiciatis possimus velit excepturi vel tempore. Tempore sed iusto doloribus esse id quidem maiores quibusdam, neque nemo incidunt natus. Ipsa in ad unde esse. Laboriosam vitae dolorem quisquam soluta veritatis deserunt fugiat exercitationem reiciendis fuga quam, harum facilis consectetur sapiente blanditiis quod ab, nobis quo nulla eius debitis alias vero laudantium. Quidem consequatur hic repellendus. Nulla dicta quos minus ullam veniam veritatis natus ipsam sunt eos aut nemo maiores dolorum quas, sequi magni voluptates. Accusantium doloribus error tempora deserunt molestiae architecto at eum, cum totam.</p>
             </section>
         </div>
-
-        <div class="BeneficioyDona">
-            <div class="Beneficio">
-                <div class="ContenedorBeneficio">
-                    <img src="Imagenes/Recursos Pagina Web/Doki - reverso.png" alt="Perro chihuahua volteando a ver la cámara">
-                    <h2>Impacto en la Comunidad</h2>
-                    <div class="Beneficiosub">
-                        <p>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, voluptatibus! Dicta nam sed amet odit quis accusantium dolore quam suscipit sunt fugit quibusdam corrupti impedit laudantium ipsa, hic facilis libero porro eos in. Labore repellendus blanditiis a laudantium illo et esse nobis consequatur, ullam reiciendis quam quo quibusdam corrupti suscipit sed iure veritatis quasi quod architecto rerum sequi harum maiores! Veniam animi expedita itaque, dolor mollitia, ratione, quos fuga et incidunt sequi porro optio! Eum earum doloribus voluptatem doloremque cupiditate qui nesciunt, obcaecati nisi, commodi facere accusantium accusamus nostrum quo alias repellat reprehenderit officiis consectetur, sapiente veritatis sint quibusdam consequatur.                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <section id="Dona">
-                <h2>Dona</h2>
-                <br>
-                <div id="paypal-container-P2VR57Q6JB77E"></div>
-                <script>
-                    paypal.HostedButtons({
-                        hostedButtonId: "P2VR57Q6JB77E",
-                    }).render("#paypal-container-P2VR57Q6JB77E")
-                </script>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dolore fugiat blanditiis mollitia
-                    eius,
-                    reiciendis earum sint eos eaque deserunt, sapiente provident ipsa soluta accusantium corrupti illo
-                    id
-                    molestias veritatis!</p>
-            </section>
-        </div>
-        </div>
-
     </main>
-    <footer> Refugio KODA 2025 Todos los derechos Reservados</footer>
+
+    <footer>
+    </footer>
+    <!--Scripts-->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAAPj8fmdl7FQuG2-T4IFWR2yJwuYCWTy5delxjsCL_JYVwuGjGn869aVwesFEmd_F8xLzllkAuYgTu6cM&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+    <script src="https://kit.fontawesome.com/4fbec67eb7.js" crossorigin="anonymous"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="script.js"></script>
 </body>
 

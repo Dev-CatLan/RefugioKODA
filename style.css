@@ -6,119 +6,125 @@
     /*Contenido+Padding */
 }
 
+
 :root {
     --ColorPrincipal: white;
-    --ColordeFuente: rgb(0, 0, 0);
-    --ColordeFondo: rgb(207, 207, 207);
-    --ColorSeparador: Blue;
     --ColorKODA: #fda31b;
+    --ColordeFuente: rgb(0, 0, 0);
+
     --marginBase: 15px;
     --borderBase: 8px;
+    --Orillas: 100px;
 }
 
 body {
-    background: var(--ColordeFondo);
     font-family: 'Lexend Deca';
     /*Fuente agregada desde HTML5*/
     width: 100%;
     line-height: 1.6;
+    background-color: grey;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 header {
+    background-color: var(--ColorPrincipal);
+    width: 100%;
+    padding: 8px;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1%;
-    background-color: var(--ColorPrincipal);
-    width: 100%;
-    position: sticky;
-    top: 0;
     z-index: 1000;
 }
 
-.Logo {
-    height: 70px;
+header .Logo {
+    max-width: 70px;
+    width: auto;
+    height: auto;
 }
 
-.Titulo {
-    font-size: clamp(1rem, 4vw, 2rem);
-    /*Mínimo, ideal, Máximo*/
+header .Titulo {
+    font-size: clamp(16px, 2vw, 24px);
 }
 
-.LogoyTitulo {
+header .LogoyTitulo {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.MenuLista {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    /*Alinea boton naranja*/
-    font-size: clamp(12px, 1.7vw, 17px);
-
+header .AbrirMenu {
+    display: none;
 }
 
-.MenuLista li {
+header .CerrarMenu {
+    display: none;
+}
+
+header .MenuyBoton {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2vw, 22px);
+}
+
+
+header .MenuLista {
+    display: flex;
+    list-style: none;
+    gap: clamp(8px, 2vw, 20px);
+    align-items: center;
+    /*Alinea boton naranja*/
+    font-size: clamp(12px, 1.7vw, 16px);
     transition: transform 0.2s ease;
 }
 
-.MenuLista li:hover {
-    transform: scale(1.1);
-}
-
-.MenuLista li a {
-    text-decoration: none;
-    color: var(--ColordeFuente);
-}
-
-.MenuLista li a:hover {
-    color: var(--ColorKODA);
-}
-
-.DonaBoton {
-    font-size: clamp(12px, 1.7vw, 17px);
-    text-decoration: none;
-    padding: 0.7em 1.2em;
-    color: var(--ColordeFuente);
+header .DonaBoton {
     background: var(--ColorKODA);
+    padding: 0.7em 1.2em;
+    font-family: 'Lexend Deca';
+    font-size: clamp(12px, 1.7vw, 16px);
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-family: 'Lexend Deca';
+    transition: transform 0.2s ease;
 }
 
-.DonaBoton:hover {
+header .MenuLista li a i {
+    display: none;
+}
+
+header .MenuLista li:hover {
     transform: scale(1.1);
+    transition: transform 0.2s ease;
 }
 
-.AbrirMenu {
-    display: none;
+header .DonaBoton:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
 }
 
-.CerrarMenu {
-    display: none;
+.HeroyAdopcion {
+    background-color: var(--ColorKODA);
 }
 
-#Adopciones,
-#Reportes,
-#Voluntariados,
-#Dona {
-    scroll-margin-top: 80px;
-}
+/* INICIO HERO SECTION*/
 
 .HeroSection {
     background-color: var(--ColorPrincipal);
-    border-end-end-radius: 100px;
-    border-bottom-left-radius: 100px;
+    border-end-end-radius: var(--Orillas);
+    border-bottom-left-radius: var(--Orillas);
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
     line-height: normal;
 }
+
 
 .HeroSection img {
     margin: 1rem;
@@ -128,65 +134,50 @@ header {
     border-radius: 10px 30px 60px 120px;
 }
 
-.HeroSection:hover {
-    .Eslogan1 {
-        color: var(--ColorKODA);
-    }
-
-    .Eslogan2 {
-        color: var(--ColordeFuente);
-    }
-}
-
-.EsloganyUVP {
+.HeroSection .EsloganyUVP {
     text-align: center;
     width: 95%;
     min-width: 250px;
 }
 
-.Eslogan {
+
+.HeroSection .Eslogan {
     font-size: clamp(1rem, 2.5vw, 2.5rem);
 }
 
-.Eslogan2 {
+
+.HeroSection .Eslogan2 {
     color: var(--ColorKODA);
 }
 
-.UVP {
+.HeroSection .UVP {
     margin: 1rem;
     font-size: clamp(10px, 1.5vw, 20px);
 }
 
-.MenuyBoton {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.CTA {
-    font-size: clamp(15px, 2vw, 20px);
+.HeroSection .CTA {
+    font-size: clamp(13px, 2vw, 20px);
     padding: 0.7em 1.2em;
     background: var(--ColorKODA);
     border: none;
     border-radius: 50px;
-    cursor: pointer;
     margin-top: 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
 
-.CTA a {
-    text-decoration: none;
-    font-family: 'Lexend Deca';
-    color: var(--ColordeFuente);
-
-}
-
-.CTA:hover {
+.HeroSection .CTA:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
-.HeroyAdopcion {
-    background-color: var(--ColorKODA);
+/*FIN HERO SECTION*/
+
+.AdopcionyReporta {
+    background-color: var(--ColorPrincipal);
 }
+
+/*INICIO ADOPCION*/
 
 #Adopciones {
     background-color: var(--ColorKODA);
@@ -209,16 +200,19 @@ header {
     padding-bottom: 10px;
     border-bottom: 3px solid var(--ColorPrincipal);
     letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
-.ContenedorCarrusel {
+
+#Adopciones .ContenedorCarrusel {
     margin-top: 15px;
     max-width: 100%;
     display: flex;
     align-items: center;
 }
 
-.Izquierda {
+
+#Adopciones .Izquierda {
     font-size: 30px;
     border: none;
     margin-left: 10px;
@@ -228,7 +222,8 @@ header {
     cursor: pointer;
 }
 
-.Derecha {
+
+#Adopciones .Derecha {
     font-size: 30px;
     border: none;
     margin-right: 10px;
@@ -238,26 +233,7 @@ header {
     cursor: pointer;
 }
 
-@media screen and (max-width: 780px) {
-
-    #Adopciones,
-    #Reportes,
-    #Voluntariados,
-    #Dona {
-        scroll-margin-top: 40px;
-    }
-
-    .Izquierda {
-        display: none;
-    }
-
-    .Derecha {
-        display: none;
-    }
-
-}
-
-.Carrusel {
+#Adopciones .Carrusel {
     display: flex;
     max-width: 100%;
     flex-wrap: nowrap;
@@ -265,33 +241,187 @@ header {
     scrollbar-width: none;
     /*Firefox*/
     -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 10%;
 }
 
-.Carrusel::-webkit-scrollbar {
+
+#Adopciones .Carrusel::-webkit-scrollbar {
     display: none;
     /*Chrome,Safari,Opera*/
 }
 
-.elemento {
-    flex: 1 0 auto;
+
+#Adopciones .elemento {
+    flex: 0 0 auto;
+    width: 90%;
+    max-width: 300px;
     padding: 30px;
     padding-top: 10px;
+    scroll-snap-align: center;
+    position: relative;
+    overflow: visible;
 }
 
-.elemento img {
+
+#Adopciones .elemento img {
     max-width: 100%;
     height: auto;
-    max-height: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     border-radius: 25px;
     background-color: var(--ColorPrincipal);
     padding: 5px;
-    object-fit: cover;
     cursor: pointer;
+    will-change: transform;
 }
 
-.AdopcionyReportes {
-    background-color: var(--ColorPrincipal);
+#Adopciones .elemento img:hover {
+    transform: scale(1.1);
 }
+
+#Adopciones .dropdown {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: var(--ColorPrincipal);
+    padding: 15px;
+    border-radius: 20px;
+    z-index: 10;
+    animation: fadeIn 0.3s ease-out;
+    text-align: left;
+    border: 1px solid var(--ColordeFuente);
+    cursor: pointer;
+    font-size: clamp(10px, 1.7vw, 14px);
+}
+
+#Adopciones .dropdown a {
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 10px;
+    max-width: 100%;
+    text-align: center;
+    background: var(--ColorKODA);
+    padding: 0.7em 1.2em;
+    font-family: 'Lexend Deca';
+    font-size: clamp(10px, 1.7vw, 14px);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#Adopciones .dropdown a:hover {
+    transform: scale(1.1);
+}
+
+#Adopciones .dropdown.mostrar {
+    display: block;
+}
+
+#Adopciones .cerrardrop {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.FormularioAdopcion {
+    display: none;
+}
+
+.FormularioAdopcion form {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding: 20px;
+    font-size: clamp(13px, 1.7vw, 16px);
+    text-align: justify;
+}
+
+.FormularioAdopcion div {
+    margin-bottom: 10px;
+}
+
+.FormularioAdopcion input {
+    border-radius: 5px;
+    font-family: 'Lexend Deca';
+    width: 100%;
+    border: 1px solid var(--ColordeFuente);
+    font-size: inherit;
+}
+
+.FormularioAdopcion .Candidato,
+.edad,
+.ContactoAdoptante,
+.CorreoAdoptante,
+.DPI,
+.Trabajo {
+    display: flex;
+    flex-direction: column;
+}
+
+.FormularioAdopcion .Entendimiento {
+    position: relative;
+}
+
+.Entendimiento input {
+    position: absolute;
+    right: 220px;
+    top: 30px;
+}
+
+@media screen and (max-width:500px) {
+
+
+    .Entendimiento input {
+        position: static;
+    }
+
+
+}
+
+.BotonAplicacion {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--ColorPrincipal);
+    font-size: inherit;
+    border-radius: 50px;
+    font-family: inherit;
+    padding: 0.7em 1.2em;
+}
+
+/*FIN ADOPCION*/
+
+.ReporteyProblema {
+    background-color: var(--ColorKODA);
+}
+
+/*INICIO REPORTES*/
+
+
 
 #Reportes {
     background-color: var(--ColorPrincipal);
@@ -304,6 +434,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
 }
+
 
 #Reportes h2 {
     font-size: clamp(1.7rem, 2.5vw, 2.5rem);
@@ -321,24 +452,28 @@ header {
     font-size: 22px;
 }
 
+
 #Reportes .Advertencia {
     margin-top: 20px;
     text-align: justify;
 }
 
+
 #Reportes div {
     margin-bottom: 15px;
 }
+
 
 #Reportes input,
 #Reportes textarea {
     border-radius: 5px;
     font-family: 'Lexend Deca';
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid var(--ColordeFuente);
     box-sizing: border-box;
     font-size: 15px;
 }
+
 
 .location {
     display: flex;
@@ -346,16 +481,19 @@ header {
     gap: 5px;
 }
 
+
 .Informacion {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
+
 #Reportes textarea {
     resize: vertical;
     min-height: 120px;
 }
+
 
 #Reportes label {
     font-weight: bold;
@@ -363,11 +501,14 @@ header {
 }
 
 
+
+
 .FotosdelCaso {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 
 #fotos::file-selector-button {
     background-color: var(--ColorKODA);
@@ -377,12 +518,15 @@ header {
     border-radius: 5px;
 }
 
+
 #Reportes .Acuerdo {
     font-size: 16px;
     display: flex;
     align-items: center;
 
+
 }
+
 
 #Reportes input[type="checkbox"] {
     appearance: none;
@@ -392,9 +536,11 @@ header {
     margin-right: 10px;
 }
 
+
 #Reportes input[type="checkbox"]:checked {
     position: relative;
 }
+
 
 #Reportes input[type="checkbox"]:checked::after {
     content: "X";
@@ -405,11 +551,13 @@ header {
     transform: translate(-50%, -50%);
 }
 
+
 #Reportes .Acuerdo label {
     font-weight: normal;
     display: inline;
     text-align: justify;
 }
+
 
 .BotonReporte {
     display: flex;
@@ -420,9 +568,11 @@ header {
     margin-top: 15px;
 }
 
+
 .BotonReporte:hover {
     transform: scale(1.1);
 }
+
 
 #Reportes button {
     padding: 0.7em 1.2em;
@@ -435,11 +585,13 @@ header {
     font-size: 15px;
 }
 
+
 .ContenedorReportes {
     flex: 1 1 350px;
     max-width: 600px;
     min-width: 280px;
 }
+
 
 .ReportesMapa h3 {
     font-size: clamp(1.7rem, 2.5vw, 2.5rem);
@@ -448,8 +600,8 @@ header {
     letter-spacing: 1px;
     color: var(--ColordeFuente);
     border-bottom: 3px solid var(--ColorKODA);
-    margin-bottom: 30px;
 }
+
 
 .ReportesMapa {
     flex: 2 1 500px;
@@ -458,6 +610,7 @@ header {
     background-color: transparent;
     padding: 0;
 }
+
 
 .Mapa {
     position: relative;
@@ -470,6 +623,7 @@ header {
     border-radius: 10px;
 }
 
+
 .Mapa iframe {
     position: absolute;
     top: 0;
@@ -480,9 +634,17 @@ header {
     border-radius: 10px;
 }
 
-.Reportesyproblematica {
-    background-color: var(--ColorKODA);
+
+/*FIN REPORTES*/
+
+.ProblematicayVoluntariados {
+    background-color: var(--ColorPrincipal);
 }
+
+
+/*INICIO PROBLEMATICA*/
+
+
 
 .problematica {
     background-color: var(--ColorKODA);
@@ -492,24 +654,28 @@ header {
     position: relative;
 }
 
+
 .problematica h2 {
     margin-bottom: 20px;
     font-size: clamp(25px, 2.5vw, 35px);
 }
 
+
 .articulo {
-    padding: 40px;
+    padding: 60px;
     margin-right: 100px;
     background-color: var(--ColorPrincipal);
-    border-radius: 10px 30px 150px 60px;
+    border-radius: 10px 30px 180px 60px;
     width: 100%;
     max-width: 1300px;
     text-align: justify;
 }
 
+
 ol {
     list-style-position: inside;
 }
+
 
 .problematica img {
     position: absolute;
@@ -520,10 +686,13 @@ ol {
     border-end-end-radius: 50px;
 }
 
-.problematicayvoluntarios {
-    background-color: var(--ColorPrincipal);
+
+/*FIN PROBLEMATICA*/
+.VoluntariadosyNosotros {
+    background-color: var(--ColorKODA);
 }
 
+/*INICIO VOLUNTARIADO*/
 
 #Voluntariados {
     background-color: var(--ColorPrincipal);
@@ -531,6 +700,7 @@ ol {
     border-bottom-left-radius: 100px;
     padding: 50px;
 }
+
 
 #Voluntariados h2 {
     text-align: center;
@@ -540,6 +710,7 @@ ol {
     margin-bottom: 30px;
 }
 
+
 .tarjetas {
     display: flex;
     flex-wrap: wrap;
@@ -547,6 +718,7 @@ ol {
     gap: 50px;
     margin-bottom: 35px;
 }
+
 
 .tarjeta {
     display: flex;
@@ -561,9 +733,11 @@ ol {
     padding: 20px;
 }
 
+
 .tarjeta:hover {
     transform: scale(1.1);
 }
+
 
 .tarjeta img {
     width: 110px;
@@ -572,146 +746,109 @@ ol {
     margin-bottom: 20px;
 }
 
+
 .tarjeta h3 {
     margin-bottom: 20px;
 }
 
+
 #Voluntariados button {
     display: block;
     margin: auto;
-    margin-bottom: 10px;
     border: 1px solid var(--ColordeFuente);
-    font-size: clamp(15px, 2vw, 17px);
+    font-size: clamp(13px, 2vw, 17px);
+    padding: 0.7em 1.2em;
+    background: var(--ColorKODA);
+    border-radius: 50px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+#Voluntariados button:hover {
+    transform: scale(1.1);
 
 }
+
 
 #Oculto {
     display: none;
 }
 
+
 .Cancelar {
     display: none;
 }
 
-.Beneficio {
+
+/*FIN VOLUNTARIADO*/
+
+.NosotrosyDona {
     background-color: var(--ColorKODA);
-    border-end-end-radius: 100px;
-    border-bottom-left-radius: 100px;
-    padding: 50px;
-    position: relative;
 }
 
-.ContenedorBeneficio h2 {
-    padding: 20px;
-    font-size: clamp(25px, 2.5vw, 35px);
+/*INICIO NOSOTROS*/
+.Nosotros{
+    background-color: var(--ColorKODA);
 }
+/*FIN NOSOTROS*/
 
-.Beneficiosub{
-    padding: 40px;
-    margin-left: 100px;
-    background-color: var(--ColorPrincipal);
-    border-radius: 30px 10px 60px 150px;
-    width: 100%;
-    max-width: 1300px;
-    text-align: justify;
-}
-
-.ContenedorBeneficio img{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 200px;
-    border-start-start-radius: 50px;
-}
-
-.BeneficioyDona {
-    background-color: var(--ColorPrincipal);
-}
-
-#Dona {
-    background-color: var(--ColorPrincipal);
-    padding: 50px;
-}
-
-@media screen and (max-width:800px) {
-
-    .UVP button {
-        margin-bottom: 20px;
-    }
-
-    .elemento img {
-        max-height: 200px;
-    }
-
-    .Mapa {
-        padding-bottom: 100%;
-    }
-
-    #Reportes {
-        gap: 15px;
-    }
-
+@media screen and (max-width: 1450px) {
     .problematica img {
-        max-width: 100px;
+        max-width: 140px;
     }
 }
 
-
-@media screen and (max-width: 600px) {
-
-    .HeroSection {
-        margin: 0;
-        padding-top: 10px;
-        border-radius: 0px;
-        width: 100%;
-    }
-
-    .HeroSection img {
-        display: none;
-    }
-
-    .HeroSection {
+@media screen and (max-width: 1049px) {
+    #Reportes {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    .Logo {
-        height: 50px;
-    }
+}
+
+@media screen and (max-width: 800px) {
 
 
-    .MenuyBoton {
-        gap: 5px;
-    }
-
-    .AbrirMenu,
-    .CerrarMenu {
+    header .MenuLista li a i {
         display: block;
     }
 
-    .AbrirMenu {
+    header .MenuLista li a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .MenuLista li a:hover {
+        color: var(--ColordeFuente);
+    }
+
+    header .AbrirMenu {
+        display: block;
         margin: 5px;
         border: none;
         background-color: var(--ColorPrincipal);
         font-size: 1.3rem;
         font-weight: 500;
+    }
+
+    header .AbrirMenu:hover {
         cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
     }
 
-    .CerrarMenu {
-        border: none;
-        background-color: var(--ColorKODA);
-        font-size: 1.5rem;
-        font-weight: 500;
+    header .CerrarMenu:hover {
         cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
     }
 
-    .MenuLista li a:hover {
-        color: var(--ColorPrincipal);
-    }
 
-    .Menu {
+    header .Menu {
         opacity: 0;
         visibility: hidden;
         display: flex;
@@ -728,52 +865,58 @@ ol {
         z-index: 9;
         max-width: 100%;
         overflow: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
-    .Menuvisible {
+    header .Menuvisible {
         opacity: 1;
         visibility: visible;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-
     }
 
-    .MenuLista {
+
+    header .MenuLista {
         flex-direction: column;
-        align-items: end;
+        align-items: start;
     }
 
-}
-
-@media screen and (max-width: 485px) {
-
-    #Reportes {
-        padding: 30px;
+    header .CerrarMenu {
+        display: block;
+        top: 0;
+        right: 0;
+        border: none;
+        background-color: var(--ColorKODA);
+        font-size: 1.5rem;
+        font-weight: 500;
     }
 
-    #Reportes h2 {
-        font-size: 1.6rem;
+    .HeroSection {
+        flex-wrap: wrap;
     }
-
-    #Reportes form {
-        font-size: 16px;
-    }
-
-}
-
-
-@media screen and (max-width: 400px) {
 
     .HeroSection img {
-        display: block;
-        border-radius: 30px 60px;
-        max-height: 350px;
-        width: 90%;
-        min-width: 240px;
+        display: none;
+        will-change: transform;
     }
 
-    .ContenedorCarrusel {
-        padding-left: 50px;
-        padding-right: 50px;
+    #Adopciones .Derecha,
+    .Izquierda {
+        display: none;
     }
 
+
+
+    @media screen and (max-width: 450px) {
+
+        .HeroSection img {
+            display: block;
+            max-width: 300px;
+            width: 90%;
+        }
+
+        #Adopciones .elemento {
+            margin: 30px;
+        }
+
+    }
 }
