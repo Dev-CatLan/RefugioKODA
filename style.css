@@ -549,7 +549,11 @@ header .DonaBoton:hover {
 }
 
 
-.BotonReporte:hover {
+.BotonReporte:hover{
+    transform: scale(1.1);
+}
+
+.BotonAplicacion:hover{
     transform: scale(1.1);
 }
 
@@ -707,7 +711,7 @@ ol {
     background-color: var(--ColorPrincipal);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
-    max-width: 300px;
+    max-width: 280px;
     width: 100%;
     padding: 20px;
 }
