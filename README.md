@@ -94,12 +94,15 @@ Centrar iframe de Paypal: El centrado no se ajustaba con ninguna función conoci
 ## Funcionalidad
 
 ### Hero Section
+
 ![App Screenshot](/Images/Img_Readme/Herosection.png)
 
 ### Adopciones, tarjeta pop out y formulario desplegable
 
 ![App Screenshot](Images/Img_Readme/SecciondeAdopcion.png)
+
 ![App Screenshot](Images/Img_Readme/Tarjetadesplegable.png)
+
 ![App Screenshot](Images/Img_Readme/preaplicacion.png)
 
 
