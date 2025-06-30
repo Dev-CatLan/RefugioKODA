@@ -8,14 +8,15 @@ Refugio guatemalteco organizado sin fines de lucro y sustentado por donativos or
 ## Índice
 
 - [Nombre y Eslogan](#nombre-y-eslogan)
-- [Temática](#tematica)
+- <h2 id="tematica">Temática</h2> 
 - [Paleta de Colores](#paleta-de-colores)
-- [Tipografía](#tipografia)
+- <h2 id="tipografia">Tipografía</h2>
 - [Estrategia UX](#estrategia-ux)
 - [Proceso de Diseño](#proceso-de-diseño)
 - [Formularios](#formularios)
-- [Desafíos y soluciones](#desafios-y-soluciones)
+- <h2 id="desafios-y-soluciones">Desafíos y soluciones</h2>
 - [Funcionalidad](#funcionalidad)
+
 ## Nombre y Eslogan 
 
 El nombre del refugio es en honor al perro de la fundadora, Koda, hoy Cody fue el primer perro rescatado, y la descripción en la sección "Nosotros" es verdadera, se le llamó así por la película "Tierra de Osos".
