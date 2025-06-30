@@ -248,6 +248,7 @@ header .DonaBoton:hover {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 10%;
+    margin-left: 15px;
 }
 
 
@@ -263,7 +264,6 @@ header .DonaBoton:hover {
     max-width: 300px;
     padding: 30px;
     padding-top: 10px;
-    scroll-snap-align: center;
     position: relative;
     overflow: visible;
 }
