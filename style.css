@@ -13,7 +13,6 @@
     --ColordeFuente: rgb(0, 0, 0);
 
     --marginBase: 15px;
-    --borderBase: 8px;
     --Orillas: 100px;
 }
 
@@ -40,6 +39,10 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+}
+
+#Adopciones, #Reportes, #Voluntariados, #Nosotros, #Dona{
+    scroll-margin-top: 55px;
 }
 
 header .Logo {
@@ -164,6 +167,7 @@ header .DonaBoton:hover {
     margin-top: 15px;
     display: inline-block;
     transition: transform 0.2s ease;
+    z-index: 8;
 }
 
 .HeroSection .CTA:hover {
@@ -296,10 +300,10 @@ header .DonaBoton:hover {
     text-align: left;
     border: 1px solid var(--ColordeFuente);
     cursor: pointer;
-    font-size: clamp(10px, 1.7vw, 14px);
+    font-size: clamp(12px, 1.7vw, 14px);
 }
 
-#Adopciones .dropdown a {
+#Adopciones .BotonAdoptar {
     display: inline-block;
     margin-left: 80px;
     margin-top: 10px;
@@ -308,14 +312,14 @@ header .DonaBoton:hover {
     background: var(--ColorKODA);
     padding: 0.7em 1.2em;
     font-family: 'Lexend Deca';
-    font-size: clamp(10px, 1.7vw, 14px);
+    font-size: clamp(12px, 1.7vw, 14px);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-#Adopciones .dropdown a:hover {
+#Adopciones .BotonAdoptar:hover {
     transform: scale(1.1);
 }
 
@@ -347,11 +351,28 @@ header .DonaBoton:hover {
     }
 }
 
+.cerraradopcion{
+    display: inline-block;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    text-align: center;
+    background: var(--ColorPrincipal);
+    padding: 0.7em 1.2em;
+    font-family: 'Lexend Deca';
+    font-size: clamp(12px, 1.7vw, 14px);
+    border: 1px solid var(--ColordeFuente);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+}
+
 .FormularioAdopcion {
     display: none;
 }
 
-.FormularioAdopcion form {
+.FormularioAdopcion form, #Reportes form {
     width: 100%;
     max-width: 450px;
     height: auto;
@@ -360,11 +381,12 @@ header .DonaBoton:hover {
     text-align: justify;
 }
 
-.FormularioAdopcion div {
-    margin-bottom: 10px;
+.FormularioAdopcion div, #Reportes div {
+    margin-bottom: var(--marginBase);
+    text-align: left;
 }
 
-.FormularioAdopcion input {
+.FormularioAdopcion input, #Reportes input,  #Reportes textarea {
     border-radius: 5px;
     font-family: 'Lexend Deca';
     width: 100%;
@@ -443,14 +465,14 @@ header .DonaBoton:hover {
     margin-bottom: 10px;
 }
 
-
+/*
 #Reportes form {
     width: 100%;
     max-width: 450px;
     height: auto;
     padding: 20px;
     font-size: 22px;
-}
+} */
 
 
 #Reportes .Advertencia {
@@ -458,35 +480,28 @@ header .DonaBoton:hover {
     text-align: justify;
 }
 
-
+/*
 #Reportes div {
     margin-bottom: 15px;
-}
+}*/
 
-
+/*
 #Reportes input,
 #Reportes textarea {
     border-radius: 5px;
     font-family: 'Lexend Deca';
     width: 100%;
     border: 1px solid var(--ColordeFuente);
-    box-sizing: border-box;
-    font-size: 15px;
-}
+    font-size: clamp(13px, 1.7vw, 16px);
+} */
 
 
-.location {
+.location, .Informacion, .FotosdelCaso  {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-
-.Informacion {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
 
 
 #Reportes textarea {
@@ -496,61 +511,26 @@ header .DonaBoton:hover {
 
 
 #Reportes label {
-    font-weight: bold;
     margin-bottom: 5px;
 }
 
-
-
-
-.FotosdelCaso {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-
-#fotos::file-selector-button {
-    background-color: var(--ColorKODA);
-    color: var(--ColordeFuente);
-    font-family: 'Lexend Deca';
-    font-size: 14px;
-    border-radius: 5px;
+#Fotos::file-selector-button {
+  background-color: var(--ColorKODA);
+  color: var(--ColordeFuente);
+  font-family: 'Lexend Deca';
+  font-size: inherit;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
 }
 
 
 #Reportes .Acuerdo {
     font-size: 16px;
     display: flex;
-    align-items: center;
-
-
+    flex-direction: column;
 }
-
-
-#Reportes input[type="checkbox"] {
-    appearance: none;
-    width: 55px;
-    height: 30px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-
-#Reportes input[type="checkbox"]:checked {
-    position: relative;
-}
-
-
-#Reportes input[type="checkbox"]:checked::after {
-    content: "X";
-    font-size: 25px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 #Reportes .Acuerdo label {
     font-weight: normal;
@@ -565,7 +545,7 @@ header .DonaBoton:hover {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 15px;
+    margin-top: var(--marginBase);
 }
 
 
@@ -856,7 +836,8 @@ ol {
 footer {
     font-size: clamp(12px, 1.7vw, 16px);
     background-color: var(--ColorKODA);
-    padding: 40px;
+    padding: 15px;
+
     display: flex;
     flex-wrap: wrap;
     gap: 5px;

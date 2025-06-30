@@ -45,8 +45,6 @@ Derecha.addEventListener("click", () => {
     carrusel.scrollBy({ left: 300, behavior: "smooth" });
 });
 
-const primerElemento = document.querySelector("#Adopciones .elemento");
-primerElemento.scrollIntoView({ behavior: "smooth", inline: "center" });
 
 const fotos = document.querySelectorAll('#Adopciones .elemento img');
 const dropdowns = document.querySelectorAll('#Adopciones .dropdown');
@@ -99,3 +97,18 @@ function ocultarcalendario() {
 }
 
 //Formulario de Adopción//
+
+function mostrarFormulario() {
+    const formulario = document.getElementById("FormularioAdopcion");
+
+    formulario.style.display = "block";
+
+    formulario.querySelectorAll("[obligatorio]").forEach(Input => {
+        Input.setAttribute("required", "true");
+    });
+}
+
+function ocultarFormulario() {
+    const formulario = document.getElementById("FormularioAdopcion");
+    formulario.style.display = "none";
+}

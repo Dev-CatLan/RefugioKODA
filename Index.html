@@ -66,7 +66,7 @@
                     <div class="UVP">
                         <p>Refugio abierto a <b>TODO</b> tipo de animales,</p>
                         <p>promovemos la adopción y el derecho a una vida digna</p>
-                        <a href="#Reportes" class="CTA" aria-label="Reportar un caso">Reporta un Caso</a>
+                        <a href="#Reportes" class="CTA"  aria-label="Reportar un caso">Reporta un Caso</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,8 @@
                                 <p><b>Sexo: </b>Macho</p>
                                 <p><b>Raza:</b> Mezcla de Pastor alemán y Cocker</p>
                                 <p><b>Personalidad:</b> Sociable con animales y personas</p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -102,7 +103,8 @@
                                 <p><b>Sexo: </b>Hembra</p>
                                 <p><b>Raza: </b>Mezcla de Golden Retriever y Cocker</p>
                                 <p><b>Personalidad:</b> Sociable con animales y personas </p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -115,7 +117,8 @@
                                 <p><b>Sexo: </b>Macho</p>
                                 <p><b>Raza:</b> Chihuahua de pelo largo</p>
                                 <p><b>Personalidad:</b> Sociable con adultos, y algunos perros</p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -128,7 +131,8 @@
                                 <p><b>Sexo: </b>Hembra</p>
                                 <p><b>Raza:</b> Mestiza</p>
                                 <p><b>Personalidad:</b> Reactiva, necesita paciencia </p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -141,7 +145,8 @@
                                 <p><b>Sexo: </b>Macho</p>
                                 <p><b>Raza:</b> Mezcla de Chihuahua</p>
                                 <p><b>Personalidad:</b> Sociable con animales y personas </p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -154,7 +159,8 @@
                                 <p><b>Sexo: </b>Macho</p>
                                 <p><b>Raza:</b> Mezcla de Pitbull</p>
                                 <p><b>Personalidad:</b> Sociable con animales y personas </p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -166,7 +172,8 @@
                                 <p><b>Sexo: </b>Macho</p>
                                 <p><b>Raza:</b> Erizo Africano</p>
                                 <p><b>Personalidad:</b> Poco sociable </p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -179,7 +186,8 @@
                                 <p><b>Sexo: </b>Macho</p>
                                 <p><b>Raza:</b> Mestizo</p>
                                 <p><b>Personalidad:</b> Sociable con humanos </p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -192,7 +200,8 @@
                                 <p><b>Sexo: </b>Hembra</p>
                                 <p><b>Raza:</b> Mestiza</p>
                                 <p><b>Personalidad:</b> Sociable con animales y personas </p>
-                                <a href="#FormularioAdopcion">Adoptar</a>
+                                <button onclick="mostrarFormulario()" class="BotonAdoptar"
+                                    aria-label="Llenar precalificación para adoptar">Adoptar</button>
                                 <button class="cerrardrop">x</button>
                             </div>
                         </div>
@@ -200,46 +209,54 @@
                     <button id="Derecha" class="Derecha" aria-label="Navegar carrusel a la Derecha"><i
                             class="fa-duotone fa-solid fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
-                <div class="FormularioAdopcion">
+                <div id="FormularioAdopcion" class="FormularioAdopcion">
                     <h2>Pre-aplicación para Adopción</h2>
                     <form action="https://formspree.io/f/xgvyrjoq" method="POST">
 
-                        <div class="Candidato">
+                        <div>
+                            <button onclick="ocultarFormulario()" class="cerraradopcion">Cancelar</button>
+                        </div>
+
+                        <div class="GrupoCandidato">
                             <label for="CandidatoparaAdopcion">👤 Nombre Completo</label>
-                            <input type="text" id="Candidato" name="Candidato" placeholder="Teresa Chavez" required>
+                            <input type="text" id="CandidatoparaAdopcion" name="nombre_completo"
+                                placeholder="Teresa Chavez" autocomplete="name" obligatorio>
                         </div>
 
-                        <div class="edad">
+                        <div class="Grupoedad">
                             <label for="edad">🔢 Edad</label>
-                            <input type="number" id="edad" name="edad" placeholder="Ej: 30" required>
+                            <input type="number" id="edad" name="edad" placeholder="Ej: 30" autocomplete="off"
+                                obligatorio>
                         </div>
 
-                        <div class="ContactoAdoptante">
+                        <div class="GrupoContacto">
                             <label for="ContactoAdoptante">📱 Número de Teléfono</label>
-                            <input type="tel" id="ContactoAdoptante" name="ContactoAdoptante" placeholder="Ej: 43129291"
-                                required>
+                            <input type="tel" id="ContactoAdoptante" name="telefono" placeholder="Ej: 43129291"
+                                autocomplete="tel" obligatorio>
                         </div>
 
-                        <div class="CorreoAdoptante">
+                        <div class="GrupoCorreo">
                             <label for="Correodeladoptante">📧 Correo Electrónico</label>
-                            <input type="email" id="CorreoAdoptante" name="CorreoAdoptante"
-                                placeholder="Ej: Teresa.Chavez@aol.com" required>
+                            <input type="email" id="Correodeladoptante" name="email" autocomplete="email"
+                                placeholder="Ej: Teresa.Chavez@aol.com" obligatorio>
                         </div>
 
                         <div class="DPI">
                             <label for="DPI">🪪 Documento de Identidad</label>
-                            <input type="text" id="DPI" name="DPI" placeholder="Número de DPI, Licencia o Pasaporte"
-                                required>
+                            <input type="text" id="DPI" name="documento_identidad"
+                                placeholder="Número de DPI, Licencia o Pasaporte" autocomplete="off"
+                                obligatorio>
                         </div>
 
                         <div class="Trabajo">
                             <label for="Trabajo">🧑‍🎓 Ocupación</label>
-                            <input type="text" id="trabajo" name="Trabajo" placeholder="Ej: Electricista" required>
+                            <input type="text" id="Trabajo" name="Ocupacion" placeholder="Ej: Electricista"
+                                obligatorio>
                         </div>
 
                         <div class="Entendimiento">
                             <input type="checkbox" id="Entendimiento" name="Entendimiento"
-                                aria-label="Entendimiento del proceso" required>
+                                aria-label="Entendimiento del proceso" obligatorio>
                             <label for="Entendimiento">Entiendo que el proceso de adopción tiene multiples faces y que
                                 llenar este formulario no garantiza que podré adoptar un animal del Refugio
                                 KODA.</label>
@@ -275,20 +292,20 @@
 
                         <div class="location">
                             <label for="Ubicacion">📍 Ubicación</label>
-                            <input type="text" id="ubicacion" name="Ubicacion"
+                            <input type="text" id="Ubicacion" name="Ubicacion"
                                 placeholder="Ej: Zona 11 Ciudad de Guatemala" required>
                         </div>
 
 
                         <div class="Informacion">
                             <label for="Caso">📝 Caso/Situación</label>
-                            <textarea id="caso" name="Caso" placeholder="Descripción del Caso" required></textarea>
+                            <textarea id="Caso" name="Caso" placeholder="Descripción del Caso" required></textarea>
                         </div>
 
 
                         <div class="FotosdelCaso">
                             <label for="Fotos">📸 Fotos del Caso</label>
-                            <input type="file" id="fotos" name="Fotos" accept="image/*" required>
+                            <input type="file" id="Fotos" name="Fotos" accept="image/*" required>
                         </div>
 
 
@@ -457,7 +474,6 @@
             </script>
         </section>
     </main>
-
     <footer>
         <div class="DireccionKODA">
             <p>Lote 29 Sector 2 Prados de Villa Hermosa</p>
